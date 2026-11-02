@@ -1,5 +1,10 @@
 # Nazra نظرة — Jordan's first traffic co-pilot you can actually drive.
 
+> **Nazra 2.0 — planning docs (Phase 0 complete):**
+> `books/NAZRA_2_ARCHITECTURE_AUDIT.md` · `books/MAPPING_PROVIDER_COMPARISON.md` ·
+> `books/NAZRA_2_BACKEND_ARCHITECTURE.md` · `books/NAZRA_2_PRODUCT_SPEC.md` ·
+> `books/NAZRA_2_IMPLEMENTATION_ROADMAP.md` (phases + cost analysis).
+
 **One line:** “الكاميرا قبل ما تشوفك” — a Jordan-first co-pilot that tells you
 the camera before the camera tells you. One object, six colors, one eye, one voice
 (زيدو). No ads while driving. Zero-Radarbot baggage.    Now with a real `.ipa`
