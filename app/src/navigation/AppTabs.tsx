@@ -14,9 +14,17 @@ const Tab = createBottomTabNavigator<AppTabParamList>();
 const TAB_ICONS: Record<keyof AppTabParamList, string> = {
   HomeMap: '◎',
   Alerts: '⚠',
-  Report: '+',
   RadarList: '☰',
+  Report: '📡',
   Settings: '⚙',
+};
+
+const TAB_LABELS: Record<keyof AppTabParamList, string> = {
+  HomeMap: 'نظرة',
+  Alerts: 'تنبيهات',
+  RadarList: 'الكاميرات',
+  Report: 'بلاغ',
+  Settings: 'إعدادات',
 };
 
 export function AppTabs() {
@@ -41,7 +49,7 @@ export function AppTabs() {
               { color, fontWeight: focused ? '700' : '500' },
             ]}
           >
-            {route.name}
+            {TAB_LABELS[route.name as keyof AppTabParamList]}
           </Text>
         ),
         tabBarIcon: ({ color, size }) => (
@@ -53,8 +61,8 @@ export function AppTabs() {
     >
       <Tab.Screen name="HomeMap" component={HomeMapScreen} />
       <Tab.Screen name="Alerts" component={AlertDialogScreen} />
-      <Tab.Screen name="Report" component={ReportScreen} />
       <Tab.Screen name="RadarList" component={RadarListScreen} />
+      <Tab.Screen name="Report" component={ReportScreen} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
     </Tab.Navigator>
   );

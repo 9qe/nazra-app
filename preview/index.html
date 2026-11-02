@@ -24,8 +24,8 @@
       <h1 class="ob-title">نظرة 🧿</h1>
       <p class="ob-sub">أهلاً — أنا زيزو من الزرقاء. من اليوم بتشوف الكاميرا قبل ما تشوفك.</p>
       <ul class="ob-feats">
-        <li><span class="f-ico">📏</span><div><b>٩ ممرات متوسط السرعة</b><small>شارع المطار + الجردن — تنبيه قبل، أثناء وبعد.</small></div></li>
-        <li><span class="f-ico">🛑</span><div><b>٢٠ كاميرا إشارة + ٢١ رادار</b><small>حسب أمانة عمّان — تتحدّث يومياً.</small></div></li>
+        <li><span class="f-ico">📏</span><div><b>١٠ ممرات متوسط السرعة</b><small>شارع المطار + الجردن — تنبيه قبل، أثناء وبعد.</small></div></li>
+        <li><span class="f-ico">🛑</span><div><b>٦٦ كاميرا إشارة + ١٠١ رادار ثابت</b><small>مصادر عامة + تصدير OSM الحيّ — سورس كل كاميرا واضح.</small></div></li>
         <li><span class="f-ico">🧿</span><div><b>التقرير المخابراتي أسبوعياً</b><small>مختصر: شنو متغيّر على مساراتك المعتمدة.</small></div></li>
         <li><span class="f-ico">🚫</span><div><b>بلا إعلانات وانت تقود</b><small>قاعدة نظرة رقم ١: الأمان مش وسيلة إعلان.</small></div></li>
       </ul>
@@ -177,6 +177,8 @@
       <button class="ctasec" id="btn-clear">صفّر بياناتك المحلية</button>
     </div>
   </section>
+  <!-- screen-reader announcements (toast mirror, polite) -->
+  <div class="vh" id="sr-live" aria-live="polite" role="status"></div>
 </div>
 
 <script src="./app.js" type="module"></script>

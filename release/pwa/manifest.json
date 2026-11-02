@@ -1,0 +1,22 @@
+{
+  "name": "Nazra نظرة — الكاميرا قبل ما تشوفك",
+  "short_name": "Nazra نظرة",
+  "description": "مساعد قيادة أردني يحذّرك من الكاميرات قبل تشوفها — ١٠ ممرات متوسط السرعة، ١٠١ رادار ثابت، ٦٦ كاميرا إشارة، نقاط ضبط ومطبّات. بيانات من مصادر عامة + بلاغات الجماعة. بلا إعلانات وانت تقود.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B0F1A",
+  "theme_color": "#0B0F1A",
+  "categories": ["navigation", "utilities", "travel"],
+  "icons": [
+    { "src": "./icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "بلاغ جاهز", "url": "./index.html#report" },
+    { "name": "كل الكاميرات", "url": "./index.html#list" }
+  ]
+}

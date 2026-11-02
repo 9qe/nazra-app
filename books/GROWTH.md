@@ -219,3 +219,88 @@ Non-repo tooling patterns (no specific repo to hand; they live in abundance unde
 ---
 
 *Every claim above is either verified via fetch (marked inline) or explicitly pattern-level. Nothing is fabricated — including the exact number of fetches used (7), with a built-in cap of ~12 respected.*
+
+---
+
+## Launch Addendum (2026-11-02)
+
+Appended by the branding/growth agent. Everything below is grounded in what exists in
+this repo on 2026-11-02: PWA at `preview/`, native iOS Expo app at `app/`, data pipeline
+at `tools/`, product data at `preview/data/radars.json` (9 corridors · 177 cameras · 2
+field-verified entries). **No user count, no store listing, and no backend yet — this
+addendum never claims any of the three.**
+
+### A. The 15-step launch checklist (actual, with repo paths)
+
+| # | Step | Path / owner | Status |
+|---|---|---|---|
+| 1 | Freeze the data tables — never hand-edit `radars.json`; edit sources and re-merge | `tools/out/gam_amman.json`, `tools/src/import_osm.py`, `tools/merge.py` | exists |
+| 2 | Manual-override format locked and documented | `tools/out/overrides.json` — **planned path, pending** (data-pipeline agent documents the schema; file not yet in repo at time of writing) | pending |
+| 3 | PWA final verify pass (install-ability, SW cache, voice lines, camera types explainer) | `books/PWA_TESTING.md` — **pending, QA agent**; app truth at `preview/sw.js`, `preview/app.js` | pending |
+| 4 | QA gate written | `release/REPORT.md` — **pending, QA agent** | pending |
+| 5 | iOS signing walkthrough | `release/ios/SIGNING_INSTRUCTIONS.md` — **planned path, pending** (iOS agent writing it now) | pending |
+| 6 | Store metadata kit finalized | `books/STORE.md` (name/subtitle/keywords/promo/descriptions/what's-new/privacy-labels) | done |
+| 7 | Privacy + Terms published as live URLs (GitHub Pages; fill `<ORGANIZATION>`/`<REPO>`) | `books/PRIVACY.md`, `books/TERMS.md`, status banners inside | done (drafts) |
+| 8 | Screenshot stand-ins + honest README | `release/store/screenshots/` + its `README.md` | done |
+| 9 | Brand kit: icon copy, splash, lockup + generator | `release/assets/` | done |
+| 10 | Real screenshots captured from the running app, replacing stand-ins | `release/store/screenshots/` | human task |
+| 11 | App Store Connect listing (Navigation category) + privacy nutrition labels per §1 of STORE.md | App Store Connect | human task |
+| 12 | Play Console listing (Maps & Navigation) + data-safety form + IARC questions answered honestly per §2 of STORE.md | Play Console | human task |
+| 13 | TestFlight + Play internal testing track before public push | TestFlight / Play Console | human task |
+| 14 | Community seeding day 1–14 (plan below) | WhatsApp/Telegram + `tools/out/overrides.json` | manual |
+| 15 | Week-1 KPI review (sheet below) → scope 1.1 | this section | manual |
+
+Order rule: 2 before 3; 7 before 11/12 (reviewers click the URLs); 13 before any
+13a-style public announcement.
+
+### B. Community seeding, day 1–14 — the zero-server workaround
+
+Reality: reports are device-local; there is no backend to ingest them. The pipeline is
+**manual until the backend ships**, and honest about it everywhere it is visible.
+
+- **Channels day 1**: 1 WhatsApp group per neighborhood/bus-line (start: taxi drivers'
+  groups), 1 Telegram channel. Never fake numbers inside; messages from real operators
+  only.
+- **Flow**: group member sends camera/corridor sighting → operator verifies against
+  `preview/data/radars.json` + GAM press line → enters the delta into
+  `tools/out/overrides.json` (schema per the data-pipeline agent's doc, step A-2) →
+  run `tools/merge.py` → regenerated `preview/data/radars.json` ships with the next
+  build/PWA deploy.
+- **Cadence**: daily 18:00 Amman review window; 24h SLA for "why did my report not
+  appear" replies; credited reporters get a name-drop in group replies (no ranks/coins —
+  the عمو نظّار ladder in §4 of this book needs validated reports, and validation needs
+  the backend, so no fake validation today).
+- **What we do NOT do in weeks 1–2**: paid boosts, ad installs, "invite-to-unlock"
+  mechanics, or publishing camera claims that did not come from GAM press + OSM +
+  a human check.
+  **Templates**: 2 push texts max/day in Jordanian dialect are already written in §5 of
+  this book (items 1–7); items 18–19-style incident alerts stay zero-joke.
+
+### C. Honest KPI sheet — week 1
+
+With no backend and no analytics bundled, **product-side numbers are not measurable in
+appid today.** Measure only what is actually observable:
+
+| Metric | Where it comes from | Notes |
+|---|---|---|
+| Installs | App Store Connect / Play Console dashboards | zero until listing exists — that's the honest first line |
+| Crash-free sessions, API latency | Xcode organizer, Play Android Vitals | both work with zero backend |
+| D1 retention proxy (PWA) | **not measurable today** | no analytics in the PWA; state it plainly instead of inventing a number. If needed, ship an opt-in on-device "sessions opened" counter later and read it via TestFlight feedback only |
+| Corridor compliance improvement | **not measurable today** | would require opt-in movement telemetry that contradicts the local-only privacy promise; deferred until a privacy-preserving opt-in design exists |
+| Reports credited (manual ledger) | operator-maintained count of `overrides.json` entries with source tag "WhatsApp/Telegram" | the only product KPI that exists this fortnight — keep it small and truthful |
+
+KPI review happens Mon 10:00; anything not in the table above is not reported.
+
+### D. The no-go list (hard)
+
+- No fake user counts, no "joining thousands of drivers" copy before a real number exists.
+- No bought reviews, incentivized installs, or review-farming.
+- No over-claiming: not "guaranteed fines avoided", not "all cameras", not "works in the
+  background" (background location is not built), not "verified" beyond the 2 field-
+  confirmed cameras.
+- No dark-pattern urgency: no fake countdowns, fake scarcity, fake "price going up"
+  (there is no price — no subscriptions is a product promise, not a marketing hook).
+- No screenshots that don't match the real app; stand-ins in `release/store/screenshots/`
+  are explicitly labeled as such and must be replaced before submission.
+- No pretending the badge ladder is live — the عمو نظّار mechanic in §4 above ships with
+  the backend or not at all.

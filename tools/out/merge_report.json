@@ -1,12 +1,77 @@
 {
+  "counts": {
+    "by_type": {
+      "bump": 4,
+      "checkpoint": 0,
+      "fixed": 101,
+      "light": 66,
+      "locality": 6,
+      "police": 0
+    },
+    "cameras": 177,
+    "zones": 10
+  },
   "generated": "2026-11-02",
+  "limit_conflicts": 0,
+  "merges": {
+    "total": 0
+  },
+  "per_source": {
+    "GAM/Central Traffic press-verified": {
+      "added": 56,
+      "duplicates": 0,
+      "entries": 56,
+      "kept": 56,
+      "merged": 0,
+      "skipped": {
+        "bad_corridor": 0,
+        "bad_geo": 0,
+        "no_geo": 0,
+        "non_dict": 0,
+        "orphan": 0
+      }
+    },
+    "OSM Overpass": {
+      "added": 131,
+      "duplicates": 0,
+      "entries": 131,
+      "kept": 131,
+      "merged": 0,
+      "skipped": {
+        "bad_corridor": 0,
+        "bad_geo": 0,
+        "no_geo": 0,
+        "non_dict": 0,
+        "orphan": 0
+      }
+    },
+    "manual estimate": {
+      "added": 0,
+      "duplicates": 0,
+      "entries": 0,
+      "kept": 0,
+      "merged": 0,
+      "skipped": {
+        "bad_corridor": 0,
+        "bad_geo": 0,
+        "no_geo": 0,
+        "non_dict": 0,
+        "orphan": 0
+      }
+    }
+  },
   "per_type": {
+    "bump": 4,
     "fixed": 101,
     "light": 66,
     "locality": 6,
-    "bump": 4,
     "police": 0
   },
-  "zones": 9,
-  "verified": 2
+  "sources": [
+    "GAM/Central Traffic press-verified",
+    "OSM Overpass"
+  ],
+  "unknown_types": {},
+  "verified": 2,
+  "zones": 10
 }

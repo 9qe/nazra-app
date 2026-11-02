@@ -1,7 +1,9 @@
-// Tariq — offline-first PWA service worker
+// Nazra نظرة — offline-first PWA service worker
 // Cache-first for shell assets; network-first for radars.json so updates land.
-const V = 'tariq-v1';
-const SHELL = ['./', './index.html', './app.css', './app.js', './manifest.json', './data/radars.json'];
+const V = 'nazra-v3';
+const SHELL = ['./', './index.html', './app.css', './app.js',
+  './lib/geo.js', './lib/alerts.js', './lib/voice.js', './lib/ui.js',
+  './manifest.json', './data/radars.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {

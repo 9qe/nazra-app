@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { OnboardingScreen } from '../screens/Onboarding';
-import { PaywallScreen } from '../screens/Paywall';
+import { AboutScreen } from '../screens/About';
 import { AppTabs, useOnboardingGate } from './AppTabs';
 import type { RootStackParamList } from './types';
 import { useTheme } from '../theme/useTheme';
@@ -39,8 +39,8 @@ export function RootNavigator() {
           <>
             <RootStack.Screen name="Tabs" component={AppTabs} />
             <RootStack.Screen
-              name="Paywall"
-              component={PaywallScreen}
+              name="About"
+              component={AboutScreen}
               options={{ presentation: 'modal', animation: 'slide_from_bottom' }}
             />
           </>

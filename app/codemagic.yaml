@@ -1,13 +1,19 @@
-# Codemagic pipeline for Nazra iOS — builds an .ipa without owning a Mac.
-# Push to GitHub or run via `codemagic-cli publish` — then Codemagic spins up a macOS M1 runner,
-# runs `npm ci && npx expo prebuild --platform ios`, then `xcodebuild` + sign, and drops an .ipa.
+# Codemagic pipeline for Nazra iOS — the ONLY working build route from this
+# Windows machine: `npx expo prebuild --platform ios` is proven to exit 1 on
+# Windows (F27), so prebuild, pod install, archive, sign and .ipa packaging all
+# happen on the Codemagic macOS runner (books/IPA.md Route A).
 #
-# Requires (one-time, on Codemagic dashboard):
-#   1. App Store Connect API key → linked app
-#   2. Distribution certificate (p12) + provisioning profile   OR let Codemagic auto-generate
-#   3. App Store Connect credentials for signing
-# Actual build → .ipa arrives in the Codemagic artifact tab, then:
-#   Sideloadly / AltStore / Apple Configurator for direct device install
+# One-time setup (Codemagic dashboard → Workflow editor → this app):
+#   1. Link the repo and select workflow `nazra-ios-ipa`.
+#   2. App Store Connect API key: add the "XCODE_APP" doc-type credentials, or
+#      set variables XCODE_ISSUER_ID + XCODE_KEY_ID + XCODE_KEY (p8 content).
+#   3. iOS distribution certificate (p12) → CM_CERTIFICATE +
+#      CM_CERTIFICATE_PASSWORD. Provisioning profile for jo.nazra.app →
+#      CM_PROVISIONING_PROFILE. Or leave both empty: when ASC is linked,
+#      `use-profiles` auto-generates them on the runner.
+# Dashboard → Start build → the signed .ipa lands in the Artifacts tab →
+# install via Sideloadly / AltStore / Apple Configurator
+# (see release/ios/SIGNING_INSTRUCTIONS.md).
 workflows:
   nazra-ios-ipa:
     name: Nazra iOS .ipa
@@ -20,34 +26,31 @@ workflows:
         XCODE_WORKSPACE: ios/Nazra.xcworkspace
         XCODE_SCHEME: Nazra
         BUNDLE_ID: jo.nazra.app
-        APPLESIGNER_CERT_CERTIFICATES: $CM_CERTIFICATE
-        APPLESIGNER_CERT_CERTIFICATE_PASSWORD: $CM_CERTIFICATE_PASSWORD
-        APPLESIGNER_KEYCHAIN_NAME: keychain-name
-        APPLESIGNER_KEYCHAIN_PASSWORD: keychain-password
+#       Signing variables come from the dashboard (CM_CERTIFICATE,
+#       CM_CERTIFICATE_PASSWORD, CM_PROVISIONING_PROFILE, XCODE_* ASC key) —
+#       never inline secrets in this file.
     scripts:
       - name: Install Node deps
         script: |
           npm ci --cache .npm || npm install --cache .npm
-          npm install --global eas-cli
-      - name: Expo prebuild (iOS)
+      - name: Expo prebuild (iOS, on the macOS runner)
         script: |
           npx expo prebuild --platform ios --no-install
-      - name: Bundle & Sign .ipa
+      - name: Set up signing keychain + profiles
+        script: |
+          keychain initialize
+          keychain add-certificates
+          xcode-project use-profiles
+      - name: Bundle, sign and package .ipa
         script: |
           cd ios
           pod install
-          xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" \
-            -configuration Release -sdk iphoneos \
-            -derivedDataPath build
-          mkdir -p ../Payload
-          cp -r "build/Build/Products/Release-iphoneos/Nazra.app" ../Payload/
           cd ..
-          zip -r nazra.ipa Payload
-      - name: Upload artifact
-        script: |
-          echo "artifact uploaded"
+          xcode-project build-ipa \
+            --workspace "$XCODE_WORKSPACE" \
+            --scheme "$XCODE_SCHEME"
     artifacts:
-      - nazra.ipa
+      - build/ios/ipa/*.ipa
     publishing:
       email:
         recipients:

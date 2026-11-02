@@ -1,0 +1,7 @@
+{
+  "name": "nazra-preview",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Nazra نظرة — offline-first PWA co-pilot. Browser-only: ESM via <script type=module>, no build step, no npm deps. type:module exists so `node --check` and tests treat the .js files as ES modules.",
+  "type": "module"
+}

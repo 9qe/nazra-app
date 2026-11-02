@@ -1,14 +1,16 @@
 export type RootStackParamList = {
   Onboarding: undefined;
-  Paywall: undefined;
+  /** About modal — replaces the removed Paywall (no subscription exists). */
+  About: undefined;
   /** Tab shell registered at top level for conditional screens. */
   Tabs: undefined;
 };
 
 export type AppTabParamList = {
   HomeMap: undefined;
-  Alerts: { focusRadarId?: string } | undefined;
-  Report: undefined;
+  /** Corridor/camera alert history + live card. */
+  Alerts: undefined;
   RadarList: undefined;
+  Report: undefined;
   Settings: undefined;
 };

@@ -1,5 +1,5 @@
 import * as ES from 'expo-status-bar';
-import { View, Text, StyleSheet, Pressable, ScrollView, useWindowDimensions } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, useWindowDimensions } from 'react-native';
 import { AppShell } from './src/components/AppShell';
 import { useDesignSystem } from './src/theme/ThemeProvider';
 import { useAppStatus } from './src/store/useAppStatus';
@@ -38,13 +38,11 @@ function WebPreviewShell() {
       </View>
       <ScrollView contentContainerStyle={css.body}>
         <Text style={[t.text.body, { color: t.colors.textSecondary }]}>
-          Onboarding gate: {onboarded ? 'open' : 'pending'} · routes: HomeMap, Alerts, Report, RadarList, Settings
+          Onboarding gate: {onboarded ? 'open' : 'pending'} · native screens: HomeMap (Apple Maps), Alerts, RadarList, Report, Settings + About modal
         </Text>
-        <WebPreviewButton label="Open HomeMap placeholder" />
-        <WebPreviewButton label="Open RadarList placeholder" />
-        <WebPreviewButton label="Open Settings placeholder" />
         <Text style={[t.text.micro, { color: t.colors.textDisabled }]}>
-          Screen flows are stubbed; fill tokens.ts before shipping branded previews.
+          This web exporter is a static scaffold viewer only — the real native screens, map, engine, speech and
+          haptics run in the iOS build (prebuild + Codemagic). react-native-maps does not render on web.
         </Text>
       </ScrollView>
     </View>
@@ -52,12 +50,8 @@ function WebPreviewShell() {
 }
 
 function WebPreviewButton({ label }: { label: string }) {
-  const t = useDesignSystem();
-  return (
-    <Pressable>
-      <Text style={[t.text.label, { color: t.colors.textSecondary, paddingVertical: 6 }]}>{label}</Text>
-    </Pressable>
-  );
+  void label;
+  return null;
 }
 
 const css = StyleSheet.create({

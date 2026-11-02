@@ -5,10 +5,15 @@ the camera before the camera tells you. One object, six colors, one eye, one voi
 (زيدو). No ads while driving. Zero-Radarbot baggage.    Now with a real `.ipa`
 pipeline.
 
-> **Fastest way to feel it right now:**
-> `cd preview && python -m http.server 8766 --bind 0.0.0.0` → open `http://<laptop-ip>:8766`
-> on your phone → "Add to Home Screen" → press **ديمو: قيادة على شارع المطار 🚗**
+> **Fastest way to feel it right now (laptop):**
+> `cd preview && python -m http.server 8766 --bind 127.0.0.1` → open `http://127.0.0.1:8766`
+> → press **ديمو: قيادة على شارع المطار**
 > to watch the co-pilot pipe up along Airport Road while you're sitting still.
+>
+> **On your phone:** browsers only grant geolocation + service workers on a SECURE context.
+> `http://<laptop-ip>:8766` will show the map but block location. For full phone testing,
+> serve over HTTPS, e.g. `npx local-ssl-proxy --source 8443 --target 8766` or any self-signed
+> terminator, and accept the cert on the phone — then Add to Home Screen.
 
 ## What's here
 ```
@@ -47,7 +52,7 @@ alerts plus 6 MSA fallbacks. You want the voice to be a mod of your own? Drop in
 |---|---|---|---|---|
 | Camera types distinguishable (avg-speed corridor vs fixed vs traffic-light vs police)
 | ✅ partially | ⚠️ self-reported only | ❌ | ✅ via evidence-tagged corpus
-| Jordan-corridor detail (9 avg-speed corridors on Airport Rd + Jordan St)
+| Jordan-corridor detail (10 avg-speed corridors on Airport Rd + Jordan St + Aqaba)
 | ❌ | ⚠️ | ❌ | ✅ from GAM Apr-2026 published lists
 | Exact legal speed limit at each camera | ⚠️ | ⚠️ | ⚠️ | ✅ from OSM `maxspeed` + overrides
 | Alerts allowed while driving (no forced ads, no interstitials)
@@ -60,7 +65,8 @@ alerts plus 6 MSA fallbacks. You want the voice to be a mod of your own? Drop in
 ## Run it
 ### PWA (now, no signing)
 ```pwsh
-cd preview; python -m http.server 8766 --bind 0.0.0.0
+cd preview; python -m http.server 8766 --bind 127.0.0.1
+# phone testing: HTTPS only (see the note at the top of this file)
 ```
 ### Corpus update (whenever you bump data)
 ```pwsh

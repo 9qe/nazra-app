@@ -1,0 +1,25 @@
+{
+  "generated": "2026-11-02",
+  "note": "Integration-owner reruns of every check, independent of subagent claims. Exit codes recorded as observed in this session.",
+  "checks": [
+    {"check": "PWA geo/alert/voice spec", "command": "node tests/geo_spec.mjs", "exitCode": 0, "summary": "91 checks passed, 0 failed, PASS"},
+    {"check": "PWA syntax check app.js", "command": "node --check preview/app.js", "exitCode": 0, "summary": "syntax ok"},
+    {"check": "PWA syntax check lib modules", "command": "node --check preview/lib/geo.js; alerts.js; voice.js; ui.js; sw.js; tests/geo_spec.mjs", "exitCode": 0, "summary": "7/7 clean"},
+    {"check": "Data pipeline unit tests", "command": "python -m unittest discover -s tools/tests -v", "exitCode": 0, "summary": "Ran 28 tests - OK"},
+    {"check": "Merge run", "command": "python tools/merge.py", "exitCode": 0, "summary": "merged -> 10 zones + 177 cameras | verified 2 | sources: GAM/Central Traffic press-verified, OSM Overpass"},
+    {"check": "Merge determinism", "command": "python tools/merge.py (twice) + sha256", "exitCode": 0, "summary": "byte-identical; sha256 c26c4a66501e matches data-pipeline agent's independent run"},
+    {"check": "Native TS compile", "command": "npx tsc --noEmit", "dir": "app", "exitCode": 0, "summary": "zero errors after RadarDatasetMeta by_type extension"},
+    {"check": "Native corridor engine harness", "command": "node scripts/corridor_harness.cjs %TEMP%/nazra_engine_out", "dir": "app", "exitCode": 0, "summary": "5/5 PASS: zone_enter fired, zone_exit_ok fired, corridor avg 18.00 km/h on 5x100m/100s, 189m silent / 156m fires (180m gate)"},
+    {"check": "iOS prebuild on Windows", "command": "npx expo prebuild --platform ios --no-install", "dir": "app", "exitCode": 1, "summary": "FAILS on Windows by design (Expo CLI: macOS/Linux only for iOS project generation) - QA F27; native-iOS agent produced ios/ via WSL2 Linux node; artifact app/ios/Nazra.xcodeproj exists, pod-less by design"},
+    {"check": "npm audit", "command": "npm audit --prefix app", "exitCode": 1, "summary": "11 moderate (glob/minimatch chain via @expo/@expo/cli dev tooling; breaking fix downgrade) - recorded, not suppressed"},
+    {"check": "expo-doctor", "command": "npx expo-doctor", "dir": "app", "exitCode": 0, "summary": "20/20 (QA-run baseline, unchanged)"},
+    {"check": "expo export web", "command": "npx expo export --platform web", "dir": "app", "exitCode": 0, "summary": "dist/index.html produced (QA-run baseline)"},
+    {"check": "Data audit of radars.json", "command": "python release/qa/_scripts/data_audit.py", "exitCode": 0, "summary": "186 entries clean: bbox/corridor/source/verified all pass - per QA run"},
+    {"check": "Verified-flag honesty", "command": "manual count of verified:true entries", "exitCode": 0, "summary": "exactly 2 (K-AM-01, K-AQ-01 GAM checkpoints); no other entry over-claims"}
+  ],
+  "known_blockers": [
+    "Real signed .ipa: requires macOS toolchain (xcodebuild + codesign + pod install). Closest artifact delivered: prebuild-generated app/ios Nazra.xcodeproj + real Codemagic pipeline in app/codemagic.yaml + release/ios/SIGNING_INSTRUCTIONS.md",
+    "On-device verification of native app (speech, haptics, GPS noise behavior): requires iPhone; not performed",
+    "PWA browser-based QA (install, offline reload, TTS voice, RTL layout): manual checklist at books/PWA_TESTING.md; not automated here"
+  ]
+}

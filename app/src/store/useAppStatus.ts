@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
+import { asyncStorageAdapter } from './storage';
 
 export interface AppStatusState {
   /** Onboarding completed: drives root navigator gate. */
@@ -33,39 +34,8 @@ export const useAppStatus = create<AppStatusState>()(
       setAlertsEnabled: (v) => set({ alertsEnabled: v }),
     }),
     {
-      name: 'app-staus-v1', // storage key — bump on store shape change
-      storage: createJSONStorage(() => localJson),
+      name: 'app-status-v1', // storage key — bump on store shape change
+      storage: createJSONStorage(() => asyncStorageAdapter),
     },
   ),
 );
-
-/**
- * Minimal storage adapter. On native this bridges to AsyncStorage via
- * `@react-native-async-storage/async-storage`; on web falls back to
- * localStorage. Keeping it local avoids a hard cross-env dep in the skeleton.
- */
-const localJson = {
-  getItem: (name: string) => {
-    try {
-      const raw = globalThis.localStorage?.getItem(name);
-      return Promise.resolve(raw);
-    } catch {
-      return Promise.resolve(null);
-    }
-  },
-  setItem: async (name: string, value: string) => {
-    try {
-      globalThis.localStorage?.setItem(name, value);
-    } catch {
-      // Storage full / private mode: flag persists in-memory only, non-fatal.
-    }
-    return;
-  },
-  removeItem: async (name: string) => {
-    try {
-      globalThis.localStorage?.removeItem(name);
-    } catch {
-      // ignore
-    }
-  },
-};

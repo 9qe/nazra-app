@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Nazra نظرة",
+    "name": "Nazra",
     "slug": "nazra-jo",
     "version": "0.1.0",
     "orientation": "default",
@@ -15,11 +15,8 @@
       "supportsTablet": true,
       "bundleIdentifier": "jo.nazra.app",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "نظرة تعرض الكاميرات القريبة وينبّهك قبلها.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "نظرة تضل منبّهك بالكاميرات حتى الصفحة مقفلة.",
-        "NSAppTransportSecurity": {
-          "NSAllowsArbitraryLoads": false
-        }
+        "CFBundleDisplayName": "نظرة",
+        "NSLocationWhenInUseUsageDescription": "نظرة تعرض الكاميرات القريبة وينبّهك قبلها أثناء استخدام التطبيق فقط."
       }
     },
     "android": {
@@ -27,7 +24,6 @@
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
-        "ACCESS_BACKGROUND_LOCATION",
         "POST_NOTIFICATIONS",
         "ACCESS_NETWORK_STATE",
         "VIBRATE"
@@ -49,11 +45,15 @@
       [
         "expo-location",
         {
-          "isIosBackgroundLocationEnabled": true,
-          "isAndroidBackgroundLocationEnabled": true
+          // HONESTY NOTE: background 'always' location is NOT enabled — iOS
+          // requires a native UIBackgroundModes/location setup that ships in a
+          // later build. The app runs while-in-use only.
+          "isIosBackgroundLocationEnabled": false,
+          "isAndroidBackgroundLocationEnabled": false
         }
       ],
-      "expo-notifications"
+      "expo-notifications",
+      "react-native-maps"
     ]
   }
 }
