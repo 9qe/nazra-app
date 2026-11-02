@@ -61,7 +61,7 @@ jobs:
         working-directory: app/ios/build/Build/Products
         run: |
           set -euo pipefail
-          APP=$(find . -maxdepth 1 -name "Nazra.app" | head -1)
+          APP=$(find . -maxdepth 3 -type d -name "Nazra.app" | head -1)
           if [ -z "$APP" ]; then echo "ERROR: Nazra.app not found"; ls -la; exit 1; fi
           rm -rf Payload
           mkdir -p Payload
