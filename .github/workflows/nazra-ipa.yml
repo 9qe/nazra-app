@@ -17,7 +17,11 @@ on:
 
 jobs:
   build-ipa:
-    runs-on: macos-15
+    # macOS 26 image: Expo 58's expo-modules-jsi SPM package declares
+    # swift-tools-version 6.2.0, which needs Xcode 26 / Swift 6.2.
+    # macos-15 ships Xcode 16.4 (Swift 6.1) and fails with
+    # "package 'apple' is using Swift tools version 6.2.0 but the installed version is 6.1.0".
+    runs-on: macos-26
     timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
