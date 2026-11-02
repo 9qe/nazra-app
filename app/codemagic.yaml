@@ -1,0 +1,57 @@
+# Codemagic pipeline for Nazra iOS — builds an .ipa without owning a Mac.
+# Push to GitHub or run via `codemagic-cli publish` — then Codemagic spins up a macOS M1 runner,
+# runs `npm ci && npx expo prebuild --platform ios`, then `xcodebuild` + sign, and drops an .ipa.
+#
+# Requires (one-time, on Codemagic dashboard):
+#   1. App Store Connect API key → linked app
+#   2. Distribution certificate (p12) + provisioning profile   OR let Codemagic auto-generate
+#   3. App Store Connect credentials for signing
+# Actual build → .ipa arrives in the Codemagic artifact tab, then:
+#   Sideloadly / AltStore / Apple Configurator for direct device install
+workflows:
+  nazra-ios-ipa:
+    name: Nazra iOS .ipa
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      node: 22
+      xcode: latest
+      vars:
+        XCODE_WORKSPACE: ios/Nazra.xcworkspace
+        XCODE_SCHEME: Nazra
+        BUNDLE_ID: jo.nazra.app
+        APPLESIGNER_CERT_CERTIFICATES: $CM_CERTIFICATE
+        APPLESIGNER_CERT_CERTIFICATE_PASSWORD: $CM_CERTIFICATE_PASSWORD
+        APPLESIGNER_KEYCHAIN_NAME: keychain-name
+        APPLESIGNER_KEYCHAIN_PASSWORD: keychain-password
+    scripts:
+      - name: Install Node deps
+        script: |
+          npm ci --cache .npm || npm install --cache .npm
+          npm install --global eas-cli
+      - name: Expo prebuild (iOS)
+        script: |
+          npx expo prebuild --platform ios --no-install
+      - name: Bundle & Sign .ipa
+        script: |
+          cd ios
+          pod install
+          xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" \
+            -configuration Release -sdk iphoneos \
+            -derivedDataPath build
+          mkdir -p ../Payload
+          cp -r "build/Build/Products/Release-iphoneos/Nazra.app" ../Payload/
+          cd ..
+          zip -r nazra.ipa Payload
+      - name: Upload artifact
+        script: |
+          echo "artifact uploaded"
+    artifacts:
+      - nazra.ipa
+    publishing:
+      email:
+        recipients:
+          - your.email@domain.tld
+      # optionally publish to App Store Connect / TestFlight:
+      # app_store_connect:
+      #   auth: integration

@@ -1,0 +1,3886 @@
+{
+  "meta": {
+    "date": "2026-11-02",
+    "fetchedAt": "2026-11-02T00:39:35Z",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "bbox": {
+      "south": 29.18,
+      "west": 34.9,
+      "north": 32.65,
+      "east": 39.3
+    },
+    "selectors": [
+      "node[\"highway\"=\"speed_camera\"]",
+      "relation[\"type\"=\"enforcement\"]",
+      "relation[\"enforcement\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"traffic_signals:shape\"=\"camera\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"surveillance\"=\"camera\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"surveillance:type\"=\"camera\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"camera:mount\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"enforcement\"]",
+      "way[\"maxspeed\"][\"enforcement\"]"
+    ],
+    "notes": "OSM traffic-camera coverage in Jordan is sparse and community-driven: many real installations are untagged, and mapped ones are often unnamed or unmaintained. Treat this corpus as a floor, not ground truth - keep verified:false, refresh by re-running tools/src/import_osm.py, and cross-check new mappings in OSM. The checkpoint/bump categories come from other sources; this importer does not query them.",
+    "entryCount": 131,
+    "counts": {
+      "fixed": 85,
+      "avg": 0,
+      "light": 46,
+      "police": 0,
+      "checkpoint": 0,
+      "bump": 0
+    },
+    "skipped": 0,
+    "dedupeRadiusMeters": 15
+  },
+  "entries": [
+    {
+      "id": "node/3258058366",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258058366,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.629728,
+      "lng": 34.917033,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258058477",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258058477,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.667773,
+      "lng": 34.932109,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258050720",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258050720,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.772489,
+      "lng": 35.194479,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3261254351",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3261254351,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.77364,
+      "lng": 35.194147,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258050085",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258050085,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.799324,
+      "lng": 35.411926,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258049764",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258049764,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.801351,
+      "lng": 35.318178,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/8788695225",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 8788695225,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.819735,
+      "lng": 35.904036,
+      "operator": null,
+      "maxspeed": null,
+      "direction": "-25",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "direction": "-25"
+      }
+    },
+    {
+      "id": "node/5011487904",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 5011487904,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.828854,
+      "lng": 35.252908,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6615327743",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6615327743,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.854689,
+      "lng": 35.890046,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772149553",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772149553,
+      "name": "السرعة 100",
+      "nameEn": null,
+      "lat": 31.856875,
+      "lng": 35.890601,
+      "operator": null,
+      "maxspeed": 100,
+      "direction": "190",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100",
+        "direction": "190"
+      }
+    },
+    {
+      "id": "node/6771952843",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6771952843,
+      "name": "السرعه 80",
+      "nameEn": null,
+      "lat": 31.868544,
+      "lng": 35.990706,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "310",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعه 80",
+        "direction": "310"
+      }
+    },
+    {
+      "id": "node/6772153500",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772153500,
+      "name": "السرعة 80",
+      "nameEn": null,
+      "lat": 31.873815,
+      "lng": 35.973755,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "110",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعة 80",
+        "direction": "110"
+      }
+    },
+    {
+      "id": "node/6771900849",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6771900849,
+      "name": "السرعة 80",
+      "nameEn": null,
+      "lat": 31.874253,
+      "lng": 35.971836,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": "300",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "السرعة 80",
+        "direction": "300"
+      }
+    },
+    {
+      "id": "node/7004744702",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 7004744702,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.876674,
+      "lng": 35.951308,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "300",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "300"
+      }
+    },
+    {
+      "id": "node/7004744701",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 7004744701,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.877354,
+      "lng": 35.948865,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "100",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "100"
+      }
+    },
+    {
+      "id": "node/6772152905",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772152905,
+      "name": "السرعة 100",
+      "nameEn": null,
+      "lat": 31.877465,
+      "lng": 35.883931,
+      "operator": null,
+      "maxspeed": 100,
+      "direction": "310",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100",
+        "direction": "310"
+      }
+    },
+    {
+      "id": "node/6772139118",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772139118,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.881271,
+      "lng": 35.9642,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "200",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "200"
+      }
+    },
+    {
+      "id": "node/6772149722",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772149722,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.882722,
+      "lng": 35.964982,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "30",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "30"
+      }
+    },
+    {
+      "id": "node/8788693122",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 8788693122,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.907895,
+      "lng": 35.865813,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772149554",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772149554,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.922802,
+      "lng": 35.911586,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "180",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "direction": "180"
+      }
+    },
+    {
+      "id": "node/483308369",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 483308369,
+      "name": "السرعة 70",
+      "nameEn": null,
+      "lat": 31.924641,
+      "lng": 35.885416,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "name": "السرعة 70"
+      }
+    },
+    {
+      "id": "node/6772147065",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772147065,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.932336,
+      "lng": 35.979732,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "90",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "90"
+      }
+    },
+    {
+      "id": "node/6771949981",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6771949981,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.933608,
+      "lng": 35.994527,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "200",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "200"
+      }
+    },
+    {
+      "id": "node/8930913731",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 8930913731,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.945183,
+      "lng": 35.854866,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "90",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "direction": "90"
+      }
+    },
+    {
+      "id": "node/8930913732",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 8930913732,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.945471,
+      "lng": 35.858013,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "270",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "direction": "270"
+      }
+    },
+    {
+      "id": "node/6772139119",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772139119,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.953825,
+      "lng": 35.991875,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "140",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "140"
+      }
+    },
+    {
+      "id": "node/6772144708",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772144708,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.957628,
+      "lng": 35.888346,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "290",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "290",
+        "name:ar": "السرعة 60"
+      }
+    },
+    {
+      "id": "node/6772144331",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772144331,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.958189,
+      "lng": 35.95483,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "200",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "200"
+      }
+    },
+    {
+      "id": "node/6772146473",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772146473,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 31.962036,
+      "lng": 35.903303,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "320",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "320"
+      }
+    },
+    {
+      "id": "node/6772146646",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772146646,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.968456,
+      "lng": 35.99838,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "230",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "230"
+      }
+    },
+    {
+      "id": "node/6772150889",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772150889,
+      "name": "السرعة 70",
+      "nameEn": null,
+      "lat": 31.96925,
+      "lng": 35.942987,
+      "operator": null,
+      "maxspeed": 70,
+      "direction": "320",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "السرعة 70",
+        "direction": "320"
+      }
+    },
+    {
+      "id": "node/6772142614",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772142614,
+      "name": "السرعة 50",
+      "nameEn": null,
+      "lat": 31.980049,
+      "lng": 35.932912,
+      "operator": null,
+      "maxspeed": 50,
+      "direction": "1",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "name": "السرعة 50",
+        "direction": "1"
+      }
+    },
+    {
+      "id": "node/6771898377",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6771898377,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.981002,
+      "lng": 36.015801,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "200",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "200"
+      }
+    },
+    {
+      "id": "node/6771952937",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6771952937,
+      "name": "السرعة 90",
+      "nameEn": null,
+      "lat": 31.995857,
+      "lng": 36.025482,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": "90",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "السرعة 90",
+        "direction": "90"
+      }
+    },
+    {
+      "id": "node/6771977414",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6771977414,
+      "name": "السرعة 90",
+      "nameEn": null,
+      "lat": 32.003078,
+      "lng": 36.037311,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": "210",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "السرعة 90",
+        "direction": "210"
+      }
+    },
+    {
+      "id": "node/13970067281",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 13970067281,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.014684,
+      "lng": 35.910426,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "id": "node/13970067280",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 13970067280,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.021481,
+      "lng": 35.894082,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "id": "node/6772139077",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772139077,
+      "name": "السرعة 70",
+      "nameEn": null,
+      "lat": 32.032846,
+      "lng": 35.835033,
+      "operator": null,
+      "maxspeed": 70,
+      "direction": "95",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "السرعة 70",
+        "direction": "95"
+      }
+    },
+    {
+      "id": "node/7140588182",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 7140588182,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.033291,
+      "lng": 35.863416,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772142976",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772142976,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 32.036121,
+      "lng": 35.8838,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "190",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "190"
+      }
+    },
+    {
+      "id": "node/6772149433",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772149433,
+      "name": "السرعة 80",
+      "nameEn": null,
+      "lat": 32.036266,
+      "lng": 35.790783,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "150",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعة 80",
+        "direction": "150"
+      }
+    },
+    {
+      "id": "node/6772118233",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772118233,
+      "name": "السرعة 80",
+      "nameEn": null,
+      "lat": 32.037098,
+      "lng": 35.789975,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "320",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعة 80",
+        "direction": "320"
+      }
+    },
+    {
+      "id": "node/6772151263",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772151263,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 32.038564,
+      "lng": 35.896798,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "20",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "20"
+      }
+    },
+    {
+      "id": "node/6772147133",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772147133,
+      "name": "السرعة 70",
+      "nameEn": null,
+      "lat": 32.040379,
+      "lng": 35.837058,
+      "operator": null,
+      "maxspeed": 70,
+      "direction": "180",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "السرعة 70",
+        "direction": "180"
+      }
+    },
+    {
+      "id": "node/5760149793",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 5760149793,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.059723,
+      "lng": 35.870038,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "90"
+      }
+    },
+    {
+      "id": "node/5760149794",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 5760149794,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.059731,
+      "lng": 35.870223,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "90"
+      }
+    },
+    {
+      "id": "node/6772155267",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772155267,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 32.06492,
+      "lng": 36.07322,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "id": "node/6772131630",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772131630,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 32.08471,
+      "lng": 36.08223,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "id": "node/13898118584",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 13898118584,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.102261,
+      "lng": 34.935221,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258015930",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258015930,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.107419,
+      "lng": 35.006187,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258018561",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258018561,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.118227,
+      "lng": 34.919062,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258018160",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258018160,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.119814,
+      "lng": 34.91241,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/13970067252",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 13970067252,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.132103,
+      "lng": 35.853731,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772136671",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772136671,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.197049,
+      "lng": 35.865077,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "180",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "180"
+      }
+    },
+    {
+      "id": "node/11820083701",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 11820083701,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.22737,
+      "lng": 34.982109,
+      "operator": null,
+      "maxspeed": 70,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "70"
+      }
+    },
+    {
+      "id": "node/11820071816",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 11820071816,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.231983,
+      "lng": 34.984224,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "90"
+      }
+    },
+    {
+      "id": "node/13970067232",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 13970067232,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.241747,
+      "lng": 35.888914,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772147227",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772147227,
+      "name": "السرعة 60",
+      "nameEn": null,
+      "lat": 32.242575,
+      "lng": 35.892804,
+      "operator": null,
+      "maxspeed": 60,
+      "direction": "170",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "direction": "170"
+      }
+    },
+    {
+      "id": "relation/196451",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 196451,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.309162,
+      "lng": 34.901617,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/6772146737",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772146737,
+      "name": "السرعة 100",
+      "nameEn": null,
+      "lat": 32.321926,
+      "lng": 35.919448,
+      "operator": null,
+      "maxspeed": 100,
+      "direction": "190",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100",
+        "direction": "190"
+      }
+    },
+    {
+      "id": "relation/1751162",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 1751162,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.333207,
+      "lng": 34.906168,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1939699",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 1939699,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.342594,
+      "lng": 34.907645,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1751161",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 1751161,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.347999,
+      "lng": 34.908216,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1939698",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 1939698,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.350346,
+      "lng": 34.908122,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/6772141523",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772141523,
+      "name": "السرعة 100",
+      "nameEn": null,
+      "lat": 32.353889,
+      "lng": 35.915348,
+      "operator": null,
+      "maxspeed": 100,
+      "direction": "210",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100",
+        "direction": "210"
+      }
+    },
+    {
+      "id": "node/1474270482",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 1474270482,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.422637,
+      "lng": 34.906929,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/1800768",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 1800768,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.423261,
+      "lng": 34.907035,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1751193",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 1751193,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.426417,
+      "lng": 34.908032,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement",
+        "note": "not accurate. please fix position and check if the camera is not also on the other direction."
+      }
+    },
+    {
+      "id": "node/3121802640",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3121802640,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.495422,
+      "lng": 34.926026,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772142975",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772142975,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.496879,
+      "lng": 35.878384,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "170",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "170"
+      }
+    },
+    {
+      "id": "node/3258076970",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258076970,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.49733,
+      "lng": 35.063389,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "red_light_camera",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "red_light_camera",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2782431",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 2782431,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.501517,
+      "lng": 35.07421,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258069507",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258069507,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.50634,
+      "lng": 35.098729,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/2908540459",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 2908540459,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.509186,
+      "lng": 34.930369,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/6772144796",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772144796,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.511635,
+      "lng": 35.873649,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "170",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "170"
+      }
+    },
+    {
+      "id": "node/6772150867",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 6772150867,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.515512,
+      "lng": 35.871983,
+      "operator": null,
+      "maxspeed": 80,
+      "direction": "0",
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "direction": "0"
+      }
+    },
+    {
+      "id": "node/3258069502",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258069502,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.521279,
+      "lng": 35.48272,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2775586",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 2775586,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.524069,
+      "lng": 34.914381,
+      "operator": null,
+      "maxspeed": 100,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "100",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/2165165957",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 2165165957,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.52507,
+      "lng": 34.914641,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2775587",
+      "type": "fixed",
+      "osmType": "relation",
+      "osmId": 2775587,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.535407,
+      "lng": 34.915644,
+      "operator": null,
+      "maxspeed": 90,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 1.0,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "maxspeed",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/8851403321",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 8851403321,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.544528,
+      "lng": 34.916677,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258069503",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258069503,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.54931,
+      "lng": 35.40101,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258069506",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258069506,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.565611,
+      "lng": 35.178137,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258069505",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258069505,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.568429,
+      "lng": 35.181086,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258069504",
+      "type": "fixed",
+      "osmType": "node",
+      "osmId": 3258069504,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.568502,
+      "lng": 35.334803,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": null,
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258052162",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258052162,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.750048,
+      "lng": 35.218846,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258052161",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258052161,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.75613,
+      "lng": 35.222019,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258049391",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258049391,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.797407,
+      "lng": 35.257416,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258048973",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258048973,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.806171,
+      "lng": 35.203905,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2473116",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2473116,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.87092,
+      "lng": 35.177436,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2473113",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2473113,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.871294,
+      "lng": 35.178945,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2473166",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2473166,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.902877,
+      "lng": 35.026286,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258044148",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258044148,
+      "name": null,
+      "nameEn": null,
+      "lat": 31.956792,
+      "lng": 34.906714,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/303516",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 303516,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.007187,
+      "lng": 34.953516,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement",
+        "note": "not 100% sure its this light"
+      }
+    },
+    {
+      "id": "relation/2459147",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2459147,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.068035,
+      "lng": 34.933165,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2459153",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2459153,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.068075,
+      "lng": 34.936909,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2459148",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2459148,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.068108,
+      "lng": 34.933673,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2459152",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2459152,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.068187,
+      "lng": 34.938507,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1369361",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1369361,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.093472,
+      "lng": 34.939819,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258026249",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258026249,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.095078,
+      "lng": 34.937446,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/1369362",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1369362,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.114065,
+      "lng": 34.939626,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258015929",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258015929,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.115059,
+      "lng": 34.940629,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258016709",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258016709,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.115555,
+      "lng": 34.903169,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2743024",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2743024,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.122236,
+      "lng": 34.903551,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258024071",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258024071,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.137169,
+      "lng": 34.940708,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/1376593",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1376593,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.151572,
+      "lng": 34.92112,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258024262",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258024262,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.16506,
+      "lng": 34.92655,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258025727",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258025727,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.176448,
+      "lng": 34.937605,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/332265504",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 332265504,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.220738,
+      "lng": 34.980743,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": true
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "id": "node/2908861249",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 2908861249,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.323607,
+      "lng": 34.904266,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/1939697",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1939697,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.345167,
+      "lng": 34.907908,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1939683",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1939683,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.357382,
+      "lng": 34.908606,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/1939682",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1939682,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.373923,
+      "lng": 34.908762,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/2908540464",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 2908540464,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.44247,
+      "lng": 34.911012,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2731198",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2731198,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.447843,
+      "lng": 34.943266,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2775611",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2775611,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.447899,
+      "lng": 34.957095,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2775612",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2775612,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.448902,
+      "lng": 34.961062,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258078262",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258078262,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.44928,
+      "lng": 34.96174,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2775625",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2775625,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.449773,
+      "lng": 34.962567,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/1431694600",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 1431694600,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.464857,
+      "lng": 34.914092,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/1751189",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 1751189,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.464996,
+      "lng": 34.914054,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement",
+        "note": "please define the exact traffic signal."
+      }
+    },
+    {
+      "id": "relation/2782410",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2782410,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.465176,
+      "lng": 34.994003,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/1431694597",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 1431694597,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.480647,
+      "lng": 34.920032,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2782429",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2782429,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.497339,
+      "lng": 35.063165,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2782466",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2782466,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.502896,
+      "lng": 35.085852,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/5251654841",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 5251654841,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.517583,
+      "lng": 34.929915,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "relation/2782478",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2782478,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.533262,
+      "lng": 35.1477,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2782482",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2782482,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.541665,
+      "lng": 35.156689,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "relation/2782483",
+      "type": "light",
+      "osmType": "relation",
+      "osmId": 2782483,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.541849,
+      "lng": 35.156651,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.65,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": false,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "id": "node/3258008461",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258008461,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.583257,
+      "lng": 34.966573,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "id": "node/3258069501",
+      "type": "light",
+      "osmType": "node",
+      "osmId": 3258069501,
+      "name": null,
+      "nameEn": null,
+      "lat": 32.643521,
+      "lng": 35.351183,
+      "operator": null,
+      "maxspeed": null,
+      "direction": null,
+      "verified": false,
+      "source": "OSM Overpass 2026-11-02",
+      "confidence": 0.85,
+      "evidence": {
+        "camera:type": null,
+        "camera:maxspeed": null,
+        "camera:direction": null,
+        "enforcement": "traffic_signals",
+        "surveillance:type": null,
+        "highway:speed_camera": true,
+        "traffic_signals": false
+      },
+      "rawTags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    }
+  ]
+}

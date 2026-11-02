@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="theme-color" content="#14131A" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Nazra نظرة" />
+<title>Nazra نظرة — الكاميرا قبل ما تشوفك</title>
+<link rel="manifest" href="./manifest.json" />
+<link rel="apple-touch-icon" href="./icon.png" />
+<link rel="stylesheet" href="./app.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+</head>
+<body>
+<div id="app" class="app">
+
+  <!-- ONBOARDING -->
+  <section id="sc-onboarding" class="screen">    <div class="ob-grad"></div>
+    <div class="ob-wrap">
+      <div class="ob-logo"><svg viewBox="0 0 64 64"><path class="lid" d="M14 30 Q32 12 50 30 Q32 34 14 30 Z"/><path class="chev c1" d="M20 44 L32 38 L44 44"/><path class="chev c2" d="M24 52 L32 48 L40 52"/><circle class="bead" cx="32" cy="27" r="6"/></svg></div>
+      <h1 class="ob-title">نظرة 🧿</h1>
+      <p class="ob-sub">أهلاً — أنا زيزو من الزرقاء. من اليوم بتشوف الكاميرا قبل ما تشوفك.</p>
+      <ul class="ob-feats">
+        <li><span class="f-ico">📏</span><div><b>٩ ممرات متوسط السرعة</b><small>شارع المطار + الجردن — تنبيه قبل، أثناء وبعد.</small></div></li>
+        <li><span class="f-ico">🛑</span><div><b>٢٠ كاميرا إشارة + ٢١ رادار</b><small>حسب أمانة عمّان — تتحدّث يومياً.</small></div></li>
+        <li><span class="f-ico">🧿</span><div><b>التقرير المخابراتي أسبوعياً</b><small>مختصر: شنو متغيّر على مساراتك المعتمدة.</small></div></li>
+        <li><span class="f-ico">🚫</span><div><b>بلا إعلانات وانت تقود</b><small>قاعدة نظرة رقم ١: الأمان مش وسيلة إعلان.</small></div></li>
+      </ul>
+      <div class="ob-btns">
+        <button class="cta" id="btn-loc">شغّل الموقع وخلّينا نمشي</button>
+        <button class="cta-ghost" id="btn-demo">ديمو: قيادة على شارع المطار 🚗</button>
+      </div>
+      <p class="ob-legal">نوجّه على كاميرات أمانة عمّان ووسط المرور من مصادر عامة + بلاغات الجماعة. ما نببيع موقعك. بلا إعلانات لمعات، ولا دُعاء للسرعة.</p>
+    </div>
+  </section>
+
+  <!-- HOME / MAP -->
+  <section id="sc-home" class="screen on" hidden>
+    <div id="map"></div>
+
+    <!-- top chrome -->
+    <header class="topbar">
+      <div class="brand">
+        <svg viewBox="0 0 64 64" class="brand-ico"><path class="lid" d="M14 30 Q32 12 50 30 Q32 34 14 30 Z"/><path class="chev c1" d="M20 44 L32 38 L44 44"/><path class="chev c2" d="M24 52 L32 48 L40 52"/><circle class="bead" cx="32" cy="27" r="6"/></svg>
+        <div class="brand-txt"><span>نظرة</span><small>بيانات أمانة عمّان + الجماعة</small></div>
+      </div>
+      <div class="top-btns">
+        <button class="ibtn round" id="btn-list" title="قائمة">🧭</button>
+        <button class="ibtn round" id="btn-settings" title="إعدادات">⚙️</button>
+      </div>
+    </header>
+
+    <!-- live HUD -->
+    <div class="hud">
+      <div class="speednest">
+        <svg viewBox="0 0 100 100" class="speedring"><circle class="ring-bg" cx="50" cy="50" r="44"/><circle class="ring-fg" cx="50" cy="50" r="44"/></svg>
+        <div class="s"><span id="speed">0</span><small>كم/س</small></div>
+      </div>
+      <div class="hud-right">
+        <div class="limitchip" id="limit">حد 60</div>
+        <div class="nexthint" id="next">لا شي على ٣ كم</div>
+        <div class="statepill"><span id="state" class="pill ok">خارج أي منطقة</span></div>
+      </div>
+    </div>
+
+    <!-- courtesy strip -->
+    <div class="courtesy" id="courtesy" hidden>
+      <span class="c-ico" id="cs-ico">📏</span><span id="cs-txt">—</span><span id="cs-sub" class="c-sub">—</span>
+    </div>
+
+    <!-- alert card -->
+    <div class="alertcard" id="alert" hidden>
+      <div class="ac-ico" id="ac-ico">🧿</div>
+      <div class="ac-body">
+        <b id="ac-title">—</b>
+        <span id="ac-sub">—</span>
+        <div class="ac-micro"><span id="ac-dist">—</span><span id="ac-dir"></span></div>
+      </div>
+      <div class="ac-count"><span id="ac-count">—</span></div>
+    </div>
+
+    <!-- corridor monitor -->
+    <div class="corridor" id="corridor" hidden>
+      <div class="co-head"><b id="co-name">—</b><span id="co-limit">حد —</span></div>
+      <div class="co-stats">
+        <div><label>متوسطك</label><span id="co-avg">—</span></div>
+        <div><label>متبقي</label><span id="co-remain">—</span></div>
+        <div><label>مسافة</label><span id="co-len">—</span></div>
+      </div>
+      <div class="co-bar"><i id="co-fill"></i></div>
+    </div>
+
+    <!-- floating controls -->
+    <div class="fs">
+      <button class="fbtn" id="btn-locate" title="موقعي">◎</button>
+      <button class="fbtn ghost" id="btn-layers" title="طبقا">≡</button>
+    </div>
+
+    <!-- bottom sheet -->
+    <div class="sheet" id="sheet">
+      <div class="sh-grab"></div>
+      <div class="sh-tabs">
+        <button class="tab on" data-t="near">قريب</button>
+        <button class="tab" data-t="corrid">ممرات</button>
+        <button class="tab" data-t="route">مسارك</button>
+      </div>
+      <div class="sh-body" id="sheet-body"></div>
+      <div class="sh-dock">
+        <button class="dbtn primary" id="btn-report">📡 بلاغ</button>
+        <button class="dbtn" id="btn-hud">☰ كل الكاميرات</button>
+        <button class="dbtn ghost-danger" id="btn-stop" hidden>⏹ إيقاف الديمو</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIST -->
+  <section id="sc-list" class="screen" hidden>
+    <header class="topbar"><div class="brand"><span>كل الكاميرات</span></div><button class="ibtn" id="btn-back-1">↩︎</button></header>
+    <input id="search" placeholder="ابحث… شارع، منطقة، نوع" />
+    <div class="filters" id="filters">
+      <button data-f="all" class="chip on">الكل</button>
+      <button data-f="avg" class="chip">متوسط السرعة</button>
+      <button data-f="fixed" class="chip">رادار ثابت</button>
+      <button data-f="light" class="chip">كاميرا إشارة</button>
+      <button data-f="locality" class="chip">ضبطة</button>
+      <button data-f="bump" class="chip">مطبّ</button>
+    </div>
+    <ul id="list" class="rlist"></ul>
+  </section>
+
+  <!-- REPORT -->
+  <section id="sc-report" class="screen" hidden>
+    <header class="topbar"><div class="brand"><span>بلاغ جديد</span></div><button class="ibtn" id="btn-back-2">↩︎</button></header>
+    <p class="rep-lead">شفت شي بالموقع؟ بلّغنا — نظرة بتفكّر الحسنات.</p>
+    <div class="grid2" id="rep-types">
+      <button class="rtile" data-t="light">💡 كاميرا إشارة</button>
+      <button class="rtile" data-t="fixed">🛑 رادار ثابت</button>
+      <button class="rtile" data-t="avg">📏 متوسط السرعة</button>
+      <button class="rtile" data-t="locality">🚨 ضبطة</button>
+      <button class="rtile" data-t="bump">🐢 مطبّ</button>
+      <button class="rtile" data-t="other">✋ غير ذلك</button>
+    </div>
+    <div class="rep-note" id="rep-note" hidden></div>
+    <button class="cta" id="btn-send">أرسل البلاغ</button>
+    <p class="rep-auto">بلاغك بيلتقط موقعك الحالي. بتقدر تعيّنة شارع بعدين.</p>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="sc-settings" class="screen" hidden>
+    <header class="topbar"><div class="brand"><span>الإعدادات</span></div><button class="ibtn" id="btn-back-3">↩︎</button></header>
+    <div class="setwrap">
+      <h2>التنبيهات</h2>
+      <label class="row"><span>قبلها بـ</span><select id="set-distance"><option value="300">٣٠٠ م</option><option value="500" selected>٥٠٠ م</option><option value="800">٨٠٠ م</option><option value="1500">١.٥ كم</option></select></label>
+      <label class="row"><span>الحد فوق بـ</span><select id="set-threshold"><option value="5">٥ كم/س</option><option value="10" selected>١٠ كم/س</option><option value="15">١٥ كم/س</option><option value="pct">١٠٪ — الأذكى</option></select></label>
+      <label class="row"><span>صوت زيزو</span><select id="set-voice"><option value="beep" selected>نغمة</option><option value="tts">صوت معقّد</option><option value="both">الاثنين</option><option value="off">بلا صوت</option></select></label>
+      <label class="row"><span>الهز عند التنبيه</span><input type="checkbox" id="set-vibe" checked /></label>
+      <label class="row"><span>عربي محكي — لسان الأحاديث</span><input type="checkbox" id="set-msa" /></label>
+
+      <h2>الممرات المتوسطة</h2>
+      <label class="row"><span>توقّع قبل ٢٠٠ م من الممر</span><input type="checkbox" id="set-avgwarn" checked /></label>
+      <label class="row"><span>اعرض متوسّطك أثناء السير</span><input type="checkbox" id="set-avgshow" checked /></label>
+
+      <h2>خصوصية</h2>
+      <label class="row"><span>أوقف الموقع والصفحة مقفلة</span><input type="checkbox" id="set-bgoff" checked /></label>
+      <label class="row"><span>شارك بلاغات الموقع مع الجماعة</span><input type="checkbox" id="set-share" checked /></label>
+
+      <h2>عن</h2>
+      <div class="about">
+        <b>نظرة 🧿 — الكاميرا قبل ما تشوفك</b>
+        <span>نسخة تجريبية 0.2 · بيانات من مصادر عامة + بلاغات الجماعة</span>
+        <span>شخصية: زيزو — بالك 🧿، بطيخة عَ آخره، ما منحكي بصوت الحكومة.</span>
+        <span>ما منبيع بياناتك ولا منربط بأي جهة رسمية.</span>
+      </div>
+      <button class="ctasec" id="btn-clear">صفّر بياناتك المحلية</button>
+    </div>
+  </section>
+</div>
+
+<script src="./app.js" type="module"></script>
+</body>
+</html>

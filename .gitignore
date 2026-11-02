@@ -1,0 +1,17 @@
+﻿node_modules/
+dist/
+.build/
+app/node_modules/
+app/ios/
+app/android/
+app/.expo/
+app/dist/
+preview/dist/
+release/qa/node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+mcp/

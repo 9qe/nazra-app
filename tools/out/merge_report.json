@@ -1,0 +1,12 @@
+{
+  "generated": "2026-11-02",
+  "per_type": {
+    "fixed": 101,
+    "light": 66,
+    "locality": 6,
+    "bump": 4,
+    "police": 0
+  },
+  "zones": 9,
+  "verified": 2
+}

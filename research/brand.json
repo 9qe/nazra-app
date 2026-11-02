@@ -1,0 +1,295 @@
+{
+  "candidates": [
+    {
+      "name": "Nazra",
+      "arabic": "نظرة",
+      "meaning": "a glance / the look — and in Jordan, THE eye: the nazar (evil-eye bead) culture. Reads as 'the eye that watches the road for you, not the state watching you'.",
+      "syllables": 2,
+      "pronunciation": "NAZ-ra — identical in Arabic and English, no phoneme an English speaker can't say",
+      "domain_feel": "nazra.jo / nazra.app / getnazra.com",
+      "scores": { "memorability": 9, "arabic_cultural_fit": 10, "visual_logo_friendliness": 10, "emoji_ability": 10, "tiktok_dank_slang_ability": 9, "domain_likelihood": 7, "tradename_risk": 8 },
+      "total": 63,
+      "notes": "The evil-eye bead 🧿 is already the most-shared protective symbol in Jordan — the app inherits it for free. Slang-adjacent ('خطير نظرة' vibes work in captions). Risk note: small Quran-recitation apps use نظرة in Arabic; different category, no Jordanian traffic-app collision found, but a dns.jo + trademark sweep must run before filing."
+    },
+    {
+      "name": "Balak",
+      "arabic": "بالك",
+      "meaning": "'your attention / watch it' — the street imperative 'بالك!' every Jordanian driver yells at the radio.",
+      "syllables": 2,
+      "pronunciation": "BA-lak / بالَك — trivial in both",
+      "domain_feel": "balak.jo / balak.app",
+      "scores": { "memorability": 9, "arabic_cultural_fit": 9, "visual_logo_friendliness": 7, "emoji_ability": 8, "tiktok_dank_slang_ability": 8, "domain_likelihood": 8, "tradename_risk": 9 },
+      "total": 58,
+      "notes": "Alert copy writes itself ('بالك!!'). Weaker logo story than Nazra — no object to draw, must brand from typography. No known traffic-app collision. Strong runner-up."
+    },
+    {
+      "name": "Dabta",
+      "arabic": "ضبطة",
+      "meaning": "'the crackdown / the bust' — Jordanian slang for a police checkpoint or stop.",
+      "syllables": 2,
+      "pronunciation": "DEB-ta / ضَبْطة — the ض is hard for LTR speakers",
+      "domain_feel": "dabta.jo / dabta.app",
+      "scores": { "memorability": 8, "arabic_cultural_fit": 8, "visual_logo_friendliness": 6, "emoji_ability": 8, "tiktok_dank_slang_ability": 9, "domain_likelihood": 8, "tradename_risk": 9 },
+      "total": 56,
+      "notes": "Highest meme voltage, but the brand would be named after the thing you fear — the police. Reads ironic-first, trust-second. Kept as in-app slang (community-report alerts) rather than the product name."
+    },
+    {
+      "name": "Ayoon",
+      "arabic": "عيون",
+      "meaning": "'eyes' — plural, surveillance flavor.",
+      "syllables": 2,
+      "pronunciation": "ah-YOON / عيون — the ع onset is the snag for LTR users",
+      "domain_feel": "ayoon.jo / ayoon.app",
+      "scores": { "memorability": 7, "arabic_cultural_fit": 7, "visual_logo_friendliness": 7, "emoji_ability": 7, "tiktok_dank_slang_ability": 6, "domain_likelihood": 6, "tradename_risk": 6 },
+      "total": 46,
+      "notes": "Generic — عيون/مراقبة cosmetics and CCTV products crowd the space; feels like a security vendor, not a consumer app. No distinctive emoji object."
+    },
+    {
+      "name": "Raqeeb",
+      "arabic": "رقيب",
+      "meaning": "'watcher / sergeant' — the military-rank double meaning.",
+      "syllables": 2,
+      "pronunciation": "RA-keeb / رقيب — fine",
+      "domain_feel": "raqeeb.jo / raqeeb.app",
+      "scores": { "memorability": 7, "arabic_cultural_fit": 7, "visual_logo_friendliness": 5, "emoji_ability": 5, "tiktok_dank_slang_ability": 5, "domain_likelihood": 6, "tradename_risk": 5 },
+      "total": 40,
+      "notes": "'Raqeeb/Rakib' dashboards and fleet-tracking products already exist in the region — highest collision risk of the five, weakest personality."
+    }
+  ],
+  "winner": {
+    "name": "Nazra",
+    "arabic": "نظرة",
+    "justification": "It's the only name that already owns Jordan's most-shared cultural object — the 🧿 bead that watches you with love instead of the state — so the logo, the mascot, the alert copy and the TikTok voice all fall out of one symbol without inventing anything.",
+    "screening": "2 syllables; identical pronunciation in both scripts; zero collation with radar/waze/speedo; not on the collision blacklist (Hojeej, Mindk, Aioi, 2id, Rahal, Via, Osquar, Tarweej, Toyou). Live dns.jo/App Store/third-party registry checks couldn't run in this session (search API down) — scores are knowledge-based; the merge agent or founder must run the dns.jo + trademark sweep before launch.",
+    "tagline_ar": "الكاميرا تشوف الأرقام… ونحنا نشوفك أنت.",
+    "tagline_en": "The camera sees plates. Nazra sees you."
+  },
+  "personality_manifesto": {
+    "character": {
+      "name": "Zeizo (زيزو)",
+      "gender": "male",
+      "age": 23,
+      "hometown": "Az-Zarqa (Al-Zuhour hills) — the meme capital of Jordanian driving. Sweifieh dandan is a guest voice, never the narrator.",
+      "car": "his cousin's hand-me-down Kia Cerato named Al-Kibsh (الكبش)",
+      "day_job": "works at a phone-accessories shop in downtown Zarqa; knows every radar between Zarqa and Karama because he paid for them",
+      "why_male_zarqa": "Zarqa shabab humor is the highest-signal Gen-Z driving register in Jordan — self-deprecating, fast, never posh — and it lands in every governorate. A Sweifieh narrator reads as influencer; a Zarqa narrator reads as friend."
+    },
+    "dialect_strategy": {
+      "default": "Ammani slang base (broadest Jordanian intelligibility) with Zarqa flavor for meme copy: بالك، خفّف، خصّ، بطيخة، ضبطة، زلمة، يلّه",
+      "fallback": "MSA (فصحى) toggle in settings. Never mixes: each alert line exists in exactly one register.",
+      "numerals": "Arabic-Indic ٠–٩ in dialect copy; Western digits in MSA lines and in the HUD speed readout",
+      "hard_rules": [
+        "never quotes law numbers, never leans on fear",
+        "a real-incident push carries zero jokes — sober tone is a brand rule, not an exception",
+        "one emoji per line, max",
+        "never messages the user while they are actively driving except the alert itself"
+      ],
+      "tone_map": {
+        "alert": "bossy-affectionate older brother: short, imperative, remedy first",
+        "speeding_caught": "playful roast + immediate remedy; never shame, never police-talk",
+        "cooperation_reported": "hype-man gratitude; the reporter's thumbs-up is the currency",
+        "hazard_incident": "sober, clipped, one flag emoji at most",
+        "first_run": "warm welcome — says its name and its promise in one line"
+      }
+    },
+    "manifesto": [
+      "الكاميرا تشوف الأرقام… ونحنا نشوفك أنت.",
+      "بطيخة ع آخره: الحد مش عدوّك، هو حمّك.",
+      "ما منحكي بصوت الحكومة؛ منحكي بصوت صاحبك في الكبسة."
+    ],
+    "manifesto_en_gloss": [
+      "The camera sees numbers... we see you.",
+      "Watermelon to the end: the limit isn't your enemy, it's your guard.",
+      "We don't talk in the voice of the state; we talk in your friend's voice from the passenger seat."
+    ]
+  },
+  "dialect_lines": {
+    "note": "12 Jordanian-dialect in-app alerts wired to triggers + 6 MSA fallback lines. Every line stays under ~60 glyphs (push-safe), one emoji max, no double jokes in a single line.",
+    "jordanian": [
+      { "key": "cam_500", "trigger": "fixed camera 500m ahead, speed above limit-10%", "text": "بالك 🧿 كاميرا بعد ٥٠٠ — خفّف، بتوصلها بطيخة" },
+      { "key": "cam_300", "trigger": "fixed camera 300m ahead", "text": "٣٠٠ للكاميرا — خصّ شوي، ولا فلاش اليوم" },
+      { "key": "cam_150", "trigger": "fixed camera 150m ahead", "text": "١٥٠ للكاميرا — آخر فرصة يا بطل، اهدى" },
+      { "key": "cam_passing", "trigger": "inside camera geofence", "text": "الكاميرا هون 📸 ابتسم وعدّى بطيخة" },
+      { "key": "cam_passed_clean", "trigger": "passed camera under limit", "text": "عدّيتها نظيف 🧿 نقاطك ما لمسها حد" },
+      { "key": "cam_passed_flash", "trigger": "camera flash event registered (speed over)", "text": "فلاش 📸 لا تقهر — الباكرة أبيض" },
+      { "key": "speed_no_cam", "trigger": "sustained overspeed 20s+, no camera ahead", "text": "٩٥ والحد ٦٠؟ 👀 اهدى يا زلمة، ما في أسرع من الغرامة" },
+      { "key": "cop_report_incoming", "trigger": "community police-checkpoint report <= 2km ahead", "text": "ضبطة بعد ٢ كم 🚨 خفّف، يلّه ما نشوفها" },
+      { "key": "report_thanks", "trigger": "user submits a verified community report", "text": "بلاغك وصل 🙏 زلمة — نظرة بتفكّر الحسنات" },
+      { "key": "hazard_report_incoming", "trigger": "community hazard/accident report <= 1km ahead", "text": "بلاغ جديد 🔴 حادث بعد ١ كم — اترك مسافة، اهدى" },
+      { "key": "first_launch", "trigger": "onboarding complete", "text": "أهلين! 🧿 أنا نظرة — من اليوم بتشوف الكاميرا قبل ما تشوفك" },
+      { "key": "streak_day_kept", "trigger": "daily clean-drive streak confirmed", "text": "يوم نظيف 🍉 السلسلة صارت بطيخة زايدة" }
+    ],
+    "msa": [
+      { "key": "msa_cam_500", "trigger": "MSA mode on: camera 500m ahead", "text": "تنبيه: كاميرا مراقبة على بعد 500 متر. يُرجى ضبط السرعة." },
+      { "key": "msa_cam_300", "trigger": "MSA mode on: camera 300m ahead", "text": "مراقبة مرورية بعد 300 متر. التزم بالحد المسموح." },
+      { "key": "msa_speed", "trigger": "MSA mode on: overspeed detected", "text": "تجاوزت الحد المسموح. يُرجى خفض السرعة الآن." },
+      { "key": "msa_pass_clean", "trigger": "MSA mode on: passed camera clean", "text": "اجتزت نقطة المراقبة دون مخالفة. أحسنت." },
+      { "key": "msa_patrol", "trigger": "MSA mode on: police patrol report ahead", "text": "تنبيه: دورية مرورية على بعد 2 كم في اتجاه السير." },
+      { "key": "msa_safety", "trigger": "MSA mode on: periodic safety reminder", "text": "تذكير: سلامتك وسلامة الآخرين أهم من الدقائق." }
+    ]
+  },
+  "visual": {
+    "palette": [
+      { "name": "Wadi Rum Night", "hex": "#14131A", "use": "dark base — app bg, icon field", "ratio_pct": 60 },
+      { "name": "Gerasa Stone", "hex": "#211D29", "use": "surfaces/cards", "ratio_pct": 25 },
+      { "name": "Petra Rose", "hex": "#F0537E", "use": "brand accent — alerts, CTA, camera flash", "ratio_pct": 8 },
+      { "name": "Nazar Blue", "hex": "#3D5AF1", "use": "trust accent — bead iris, community-verified pins", "ratio_pct": 4 },
+      { "name": "Ajloun Pine", "hex": "#2FBF71", "use": "success — passed-clean, streak alive", "ratio_pct": 2 },
+      { "name": "Dana Amber", "hex": "#F5A623", "use": "warning — soon-events, low battery", "ratio_pct": 1 }
+    ],
+    "ratio_rule": "60% base / 25% surface / 15% accents total. Petra Rose never exceeds 25% of any screen. Nazar Blue is reserved for the eye motif and verified-community signals only — never buttons, never decorative.",
+    "light_palette": { "bg": "City of Salt #F8F4EC", "surface": "#FFFFFF", "text": "Kohl Black #12101A", "text_disabled": "#8A8595", "accents_darkened": { "Petra Rose": "#D93A66", "Nazar Blue": "#2B45C4", "Ajloun Pine": "#1F9E64", "Dana Amber": "#C77D00" } },
+    "dark_palette": { "bg": "#14131A", "surface": "#211D29", "elevated": "#2A2438", "text": "#F8F4EC", "text_dim": "#B8B3C5", "accents_brightened": { "Petra Rose": "#FF6E95", "Nazar Blue": "#6C87FF", "Ajloun Pine": "#4AD58C", "Dana Amber": "#FFB945" } },
+    "typography": {
+      "display": "Changa (Google Fonts) 700/800 — Arabic+Latin variable, condensed-sporty; HUD speed digits, streak counters, headline lockups",
+      "body": "IBM Plex Sans Arabic 400/500/600 — covers both scripts natively; Latin fallback IBM Plex Sans",
+      "bundle_alternative": "if size budget is tight, Readex Pro as a single variable file for both roles",
+      "system_fallbacks": "SF Arabic (iOS), Segoe UI Arabic (Android/Windows)",
+      "emoji_fallback": "Noto Color Emoji — the 🧿 must render identically everywhere; never replace it with a drawn asset inside copy",
+      "rtl_rules": "auto-direction with bidi isolation on mixed strings; line-height 1.45 Arabic / 1.30 Latin; real font weights only — never synthetic bold on Arabic; numerals per dialect_strategy"
+    },
+    "icon_brief": "1024px canvas, dark Wadi Rum Night field. Centered: one stylized kohl eye — the upper lid drawn as a speed-camera housing silhouette, iris is a Nazar Blue ring around a Petra Rose pupil, three speed chevrons sweeping in from bottom-left (direction of travel). No text, no radar dish, no police blue, no clip-art cone. At 48px the eye must still read; main stroke >= 10% of canvas width. Monochrome variant: white eye on black. Light variant: Kohl eye on City of Salt. Splash: the bead blinks once (700ms), then the نظرة wordmark fades in.",
+    "mascot": {
+      "name": "عمو نظّار (Om Nazar)",
+      "design": "an evil-eye bead with kohl lashes and one raised eyebrow, wearing a white stitched kufi cap; grumpy-soft — judges your speed, would never admit he cares",
+      "usage": "empty states, weekly report cards, push-notification avatar, error screens",
+      "rule": "mascot never renders while the car is moving at speed — attention belongs to the road"
+    },
+    "motion_camera_tone": [
+      "alert entrance: 180ms slide-up + fade on a soft spring, one per event max",
+      "camera flash overlay: 120ms white at <= 8% opacity — reads like the road flashed, never strobes the UI",
+      "haptics: medium impact at cam <=300m, light at 500m, none while speed > 80 km/h",
+      "motion-safe rule: at speed > 60 km/h parallax/rotation are off and every animation caps to 200ms",
+      "error shake: 240ms, small amplitude; streak milestones (7/21/66) get a watermelon burst on low-end devices",
+      "shutter sound: off by default, opt-in in settings"
+    ],
+    "dont_list": [
+      "no radar-dish clip art anywhere",
+      "no police palette (black-and-checker) hijack",
+      "no Waze-lifeguard cartoon energy",
+      "no white text on Petra Rose — contrast fails",
+      "the 🧿 emoji and the drawn eye never appear in the same lockup — one symbol per surface"
+    ]
+  },
+  "viral_hooks": [
+    {
+      "name": "ملف الأسبوع — التقرير المخابراتي (Weekly Mukhabarat Report) 🗂",
+      "mechanic": "Screenshot-bait weekly stat card, fully on-device: km driven, cameras passed clean, flashes, fastest clean pass, longest streak, and a sassy verdict tier — بطيخة الموسم، الأمين السري، or شخص مطلوب.",
+      "implementation": "SQLite weekly rollup (Sun–Sat). Canvas renderer (Flutter/Skia or RN Skia) outputs 1080x1920 plus a 1:1 crop; long-press the card opens the share intent. Verdict thresholds deterministic; caption bank swapped via remote config. Zero network calls in V1.",
+      "v1_cost": "no server, ~2 dev-days",
+      "screenshot_bait": "verdict line + nzr monogram + 🧿 watermark keep it identifiable out of context — people ask what app made it"
+    },
+    {
+      "name": "بطيخة السلسلة — Watermelon Streaks 🍉",
+      "mechanic": "Daily clean-drive streak: >= 15km with zero flashes and no sustained overspeed. Counter grows; a flash breaks it; milestones 7/21/66 trigger shareable cards.",
+      "implementation": "local stats; streaks require real GPS distance inside the trip window (open-app doesn't count); daily local notification; V2 adds opt-in pseudonym city leaderboard, no plate data.",
+      "v1_cost": "rides on the same rollup, ~2 dev-days"
+    },
+    {
+      "name": "Sassy Push Voice",
+      "mechanic": "Push bank of 30 Jordanian-dialect lines across three contexts: app unused 7+ days, streak at risk, weekly report ready to drop.",
+      "implementation": "copy bank in JSON with round-robin rotation (never random repeats); caps: <=1/day, silent 00:00-07:00, none during ongoing calls; each push deep-links to the streak card; CTR-based retirement via remote config.",
+      "v1_cost": "remote-config only"
+    },
+    {
+      "name": "نظرة على الشباب — Referral Ladder",
+      "mechanic": "Each verified friend install gives both sides 7 days of Plus; 3 invites unlock the Kufiyya skin; 10 unlocks the catalog-worthy title 'أمير اللوحة'.",
+      "implementation": "Play Install Referrer + iOS universal links; server verifies the install within 14 days; anti-abuse: install fingerprint + velocity cap (<= 4 invites / 24h). Skins are pure JSON data.",
+      "v1_cost": "light server, ~4 dev-days — deferred to V2"
+    },
+    {
+      "name": "العين الثالثة — Third-Eye Ghost Cams 👁",
+      "mechanic": "Camera view overlays glowing beads at known camera coordinates — a spooky-fun shareable; exported shots come out wearing the dialect meme-caption sticker pack.",
+      "implementation": "heading-only geopose (no depth sensors required, ARKit/ARCore-lite); hard-disabled above 40 km/h; 30fps render budget; screenshot pipeline reuses the weekly-report card style.",
+      "v1_cost": "phone-camera experiment, V2"
+    }
+  ],
+  "mvp_viral_hook": {
+    "ship": "ملف الأسبوع (the Weekly Mukhabarat Report card)",
+    "why": "The only mechanic that makes every user a weekly billboard with zero server cost, no permissions risk, and a share loop built from something people already screenshot anyway.",
+    "acceptance_criteria": [
+      "renders fully offline from local SQLite",
+      "long-press opens the system share sheet",
+      "verdict tiers materially differ past thresholds",
+      "nzr monogram + 🧿 watermark on every exported image",
+      "pixel-identical output on low-end Androids (fixed 1080 width, embedded bitmap fonts)"
+    ]
+  },
+  "monetization": {
+    "model": "freemium with a single paid tier (Nazra Plus), engineered around how Jordanians actually pay",
+    "payment_reality": "Store IAP exists but card penetration is thin; most Jordanians top up with local prepaid Apple/Google gift cards. Web-checkout redirects inside the app are policy-risky — so the flow is: IAP primary, gift-card redemption as the local workhorse, optional Android-side web store selling redeem codes via a local PSP (e.g., MadfooatCom) that get redeemed through the store, never in-app.",
+    "tiers": [
+      { "tier": "Free (نظرة)", "price": "0", "includes": ["live speed-cam alerts (national radar DB, weekly updates)", "community reports — up to 5/day", "watermelon streaks", "the weekly report card", "banner ads in menu/idle surfaces only — never during active driving"] },
+      { "tier": "Nazra Plus — monthly", "price_jod": 1.5, "price_usd": 2.09, "includes": ["no ads", "full-Jordan offline pack (~2-3MB, auto-refreshed on Wi-Fi)", "3-country coverage: Jordan + Saudi Arabia + UAE", "unlimited community reports", "streak insurance — 1 flash forgiven per month", "Kufiyya + car-sounds skin pack"] },
+      { "tier": "Nazra Plus — annual", "price_jod": 9.99, "price_usd": 13.99, "pitch": "save ~45% vs monthly; annual pre-selected at the paywall", "includes": "everything in monthly Plus" },
+      { "tier": "Kufiyya Lifetime (early adopter)", "price_jod": 24.99, "price_usd": 34.99, "pitch": "capped at the first 10,000 accounts; funds the radar-DB range expansion" }
+    ],
+    "founding_offer": "first month at 0.99 JOD (~$1.40), expires when the 10,000th account registers — urgency without dark patterns",
+    "growth": "referral ladder + weekly share card are the two acquisition engines; paid spend stays off until 5k users"
+  },
+  "appstore_copy_en": {
+    "title": "Nazra — Speed Cam & Radar",
+    "subtitle": "See the cam before it sees you",
+    "promo": "The camera sees plates. Nazra sees you.",
+    "keywords": "speed,cam,radar,traffic,alert,jordan,fines,driving,trap,camera",
+    "description": [
+      "Every Jordanian driver knows the feeling. You're on the highway with the music up and your foot reasonable — and somewhere ahead there's a camera with your name on it.",
+      "Nazra is the friend in the passenger seat who actually knows where every camera lives: Zarqa to Aqaba, Sweifieh to Mafraq, built on a real maintained radar map of the kingdom.",
+      "WHAT IT DOES",
+      "• Speed camera and police-checkpoint alerts before you hit them — not after",
+      "• Community reports for checkpoints, accidents and blockages — verified with one tap",
+      "• A weekly report card of your driving — funny enough to share, honest enough to trust",
+      "• Streaks: drive clean, keep the 🍉 alive",
+      "• Works fully offline — the radar map doesn't care about your signal",
+      "WHY A HUMAN WROTE THIS",
+      "Jordan's roads are stressful enough. Nazra's alerts sound like your mate Zeizo, not like a ministry. We don't scare you into a subscription — we keep you from paying for one mistake.",
+      "Nazra Plus: no ads, offline packs for all of Jordan, 3-country coverage, unlimited community reports. Prices are shown in JOD before you confirm — no free-trial tricks.",
+      "Drive slow. We're watching out for you, not watching you."
+    ],
+    "whats_new_sample": "Version 1.1 — the Weekly Report is here. Your driving, judged kindly. Plus: faster camera alerts on the Zarqa–Mafraq corridor and the Irbid ring."
+  },
+  "appstore_copy_ar": {
+    "title": "نظرة — تنبيه الرادار",
+    "subtitle": "شوف الكاميرا قبل ما تشوفك",
+    "promo": "الكاميرا تشوف الأرقام… ونحنا نشوفك أنت.",
+    "keywords": "رادار,كاميرا,تنبيه,سرعة,غرامة,الأردن,مراقبة,ضبطة",
+    "description": [
+      "الرادار بيشوف لوحة سيارتك… ونظرة بيشوفك أنت.",
+      "نظرة هي صاحبك اللي بتعرف كل كاميرا بالأردن: من الزرقا للقادسية، ومن مطار الملكة علياء لغربي عمان.",
+      "شو بديلنا؟",
+      "• تنبيهات كاميرات وضبطات المرور قبل ما تيجي — مش بعدها",
+      "• بلاغات من السايقين: ضبطات، حوادث، عوائق — تأكيد بضغطة وحدة",
+      "• ملف أسبوعي لحركتك: مضحك كفاية تنشره، وصادق كفاية تصدّقه",
+      "• سلسلة البطيخة: كل يوم نظيف بتطول السلسلة وبتبيّض نقاطك",
+      "• شغال من غير نت — خريطة الرادار ما بتعتمد على شبكة الموبايل",
+      "ليش صوتنا صاحب مش وزارة؟ لأن الطريق صار صعبة كفاية، والمنبّه لازم يكون صوت صاحبك.",
+      "نظرة Plus: بلا إعلانات، حزم أوفلاين لكل الأردن، تغطية بثلاثة بلدان، وبلاغات مجتمع بلا سقف. الأسعار بالدينار واضحة قبل الشراء.",
+      "سق بطيخة. نظرة بتحمّل، مش بتحاسب."
+    ]
+  },
+  "name_logo_brief": {
+    "wordmark": {
+      "primary_ar": "نظرة",
+      "secondary_en": "Nazra",
+      "letterform_idea": "the two dots of نظرة's ة become two camera flash bulbs — the only 'letter cam' in the category; in the Latin lockup the 'z' diagonal doubles as a speed chevron",
+      "lockup_rules": "RTL standard: icon right, wordmark left; EN single-line lockup: icon left, wordmark right; clear space = one ة-ring height on every side; minimum height 24px",
+      "monochrome": "Kohl-on-Salt and Salt-on-Wadi-Rum-Night only; Petra Rose never touches the wordmark"
+    },
+    "glyph": {
+      "core": "kohl eye + Nazar Blue iris ring + Petra Rose pupil + three speed chevrons",
+      "geometric_grid": "circles only — concentric rings on a strict 8pt grid; nothing freehand",
+      "favicon": "eye-only at 32px, no ring, no chevrons",
+      "monogram": "nzr — lowercase, stamped on exported community images"
+    },
+    "store_specs": [
+      "iOS 1024 no-alpha; the eye recognizable even at 60% downscale",
+      "Android adaptive: foreground eye on Wadi Rum Night bg, 33dp safe circle",
+      "first store screenshot always shows an alert firing with dialect copy visible"
+    ],
+    "dos_and_donts": [
+      "do: bead geometry (rings), kohl weight, one accent per surface",
+      "dont: robot eyes, radar dishes, police checkers, tribal borders, AI-gradient shine",
+      "the 🧿 emoji may appear inside copy; it never replaces the drawn eye in the icon"
+    ]
+  }
+}

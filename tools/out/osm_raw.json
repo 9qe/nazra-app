@@ -1,0 +1,2014 @@
+{
+  "meta": {
+    "date": "2026-11-02",
+    "fetchedAt": "2026-11-02T00:39:35Z",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "bbox": {
+      "south": 29.18,
+      "west": 34.9,
+      "north": 32.65,
+      "east": 39.3
+    },
+    "selectors": [
+      "node[\"highway\"=\"speed_camera\"]",
+      "relation[\"type\"=\"enforcement\"]",
+      "relation[\"enforcement\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"traffic_signals:shape\"=\"camera\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"surveillance\"=\"camera\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"surveillance:type\"=\"camera\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"camera:mount\"]",
+      "node[\"highway\"=\"traffic_signals\"][\"enforcement\"]",
+      "way[\"maxspeed\"][\"enforcement\"]"
+    ],
+    "notes": "OSM traffic-camera coverage in Jordan is sparse and community-driven: many real installations are untagged, and mapped ones are often unnamed or unmaintained. Treat this corpus as a floor, not ground truth - keep verified:false, refresh by re-running tools/src/import_osm.py, and cross-check new mappings in OSM. The checkpoint/bump categories come from other sources; this importer does not query them.",
+    "elementCount": 138,
+    "countsByOsmType": {
+      "node": 98,
+      "way": 0,
+      "relation": 40
+    }
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 3258058366,
+      "lat": 31.6297275,
+      "lon": 34.9170326,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258058477,
+      "lat": 31.667773,
+      "lon": 34.9321089,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258052162,
+      "lat": 31.7500476,
+      "lon": 35.2188463,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258052161,
+      "lat": 31.7561299,
+      "lon": 35.2220189,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258050720,
+      "lat": 31.7724895,
+      "lon": 35.1944788,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3261254351,
+      "lat": 31.77364,
+      "lon": 35.1941473,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258048973,
+      "lat": 31.8061712,
+      "lon": 35.2039053,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258044148,
+      "lat": 31.9567924,
+      "lon": 34.9067145,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258026249,
+      "lat": 32.095078,
+      "lon": 34.9374463,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13898118584,
+      "lat": 32.1022608,
+      "lon": 34.9352214,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258016709,
+      "lat": 32.1155554,
+      "lon": 34.9031695,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258018160,
+      "lat": 32.1198136,
+      "lon": 34.9124099,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258015929,
+      "lat": 32.1150589,
+      "lon": 34.9406287,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258018561,
+      "lat": 32.1182272,
+      "lon": 34.9190617,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258024071,
+      "lat": 32.1371695,
+      "lon": 34.940708,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258015930,
+      "lat": 32.107419,
+      "lon": 35.006187,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258024262,
+      "lat": 32.1650597,
+      "lon": 34.9265503,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258025727,
+      "lat": 32.1764485,
+      "lon": 34.9376053,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 332265504,
+      "lat": 32.2207383,
+      "lon": 34.9807426,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11820083701,
+      "lat": 32.2273701,
+      "lon": 34.9821088,
+      "tags": {
+        "highway": "speed_camera",
+        "maxspeed": "70"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11820071816,
+      "lat": 32.2319835,
+      "lon": 34.9842237,
+      "tags": {
+        "highway": "speed_camera",
+        "maxspeed": "90"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2908861249,
+      "lat": 32.3236067,
+      "lon": 34.9042658,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1474270482,
+      "lat": 32.4226366,
+      "lon": 34.9069287,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1431701159,
+      "lat": 32.4265087,
+      "lon": 34.9081221,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2908540464,
+      "lat": 32.4424702,
+      "lon": 34.9110121,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1431694600,
+      "lat": 32.4648572,
+      "lon": 34.9140917,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258078262,
+      "lat": 32.4492802,
+      "lon": 34.9617398,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1431694597,
+      "lat": 32.4806472,
+      "lon": 34.9200322,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3121802640,
+      "lat": 32.4954221,
+      "lon": 34.9260258,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2908540459,
+      "lat": 32.509186,
+      "lon": 34.9303692,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5251654841,
+      "lat": 32.5175833,
+      "lon": 34.9299154,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258076970,
+      "lat": 32.49733,
+      "lon": 35.0633889,
+      "tags": {
+        "enforcement": "red_light_camera",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3564155359,
+      "lat": 32.5015538,
+      "lon": 35.0742518,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069507,
+      "lat": 32.5063398,
+      "lon": 35.0987291,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2165165957,
+      "lat": 32.52507,
+      "lon": 34.9146413,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2165167688,
+      "lat": 32.5354732,
+      "lon": 34.9157032,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8851403321,
+      "lat": 32.5445284,
+      "lon": 34.9166769,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258008461,
+      "lat": 32.583257,
+      "lon": 34.9665732,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069506,
+      "lat": 32.5656112,
+      "lon": 35.1781373,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069505,
+      "lat": 32.5684294,
+      "lon": 35.1810855,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258049391,
+      "lat": 31.7974074,
+      "lon": 35.2574161,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5011487904,
+      "lat": 31.8288535,
+      "lon": 35.2529084,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258049764,
+      "lat": 31.8013514,
+      "lon": 35.3181782,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258050085,
+      "lat": 31.7993239,
+      "lon": 35.4119258,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8788695225,
+      "lat": 31.819735,
+      "lon": 35.9040361,
+      "tags": {
+        "direction": "-25",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6615327743,
+      "lat": 31.8546892,
+      "lon": 35.8900461,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772149553,
+      "lat": 31.8568754,
+      "lon": 35.8906012,
+      "tags": {
+        "direction": "190",
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772152905,
+      "lat": 31.8774655,
+      "lon": 35.8839307,
+      "tags": {
+        "direction": "310",
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7004744701,
+      "lat": 31.8773543,
+      "lon": 35.948865,
+      "tags": {
+        "direction": "100",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7004744702,
+      "lat": 31.8766742,
+      "lon": 35.9513076,
+      "tags": {
+        "direction": "300",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772139118,
+      "lat": 31.8812713,
+      "lon": 35.9641998,
+      "tags": {
+        "direction": "200",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772149722,
+      "lat": 31.8827221,
+      "lon": 35.9649822,
+      "tags": {
+        "direction": "30",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6771900849,
+      "lat": 31.8742528,
+      "lon": 35.971836,
+      "tags": {
+        "direction": "300",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "السرعة 80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772153500,
+      "lat": 31.8738152,
+      "lon": 35.9737549,
+      "tags": {
+        "direction": "110",
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعة 80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6771952843,
+      "lat": 31.8685438,
+      "lon": 35.9907056,
+      "tags": {
+        "direction": "310",
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعه 80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8930913731,
+      "lat": 31.9451832,
+      "lon": 35.8548655,
+      "tags": {
+        "direction": "90",
+        "highway": "speed_camera",
+        "maxspeed": "60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8930913732,
+      "lat": 31.9454708,
+      "lon": 35.8580133,
+      "tags": {
+        "direction": "270",
+        "highway": "speed_camera",
+        "maxspeed": "60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772118233,
+      "lat": 32.0370985,
+      "lon": 35.7899751,
+      "tags": {
+        "direction": "320",
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعة 80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772149433,
+      "lat": 32.0362661,
+      "lon": 35.7907828,
+      "tags": {
+        "direction": "150",
+        "highway": "speed_camera",
+        "maxspeed": "80",
+        "name": "السرعة 80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772139077,
+      "lat": 32.0328464,
+      "lon": 35.8350333,
+      "tags": {
+        "direction": "95",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "السرعة 70"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772147133,
+      "lat": 32.0403789,
+      "lon": 35.8370582,
+      "tags": {
+        "direction": "180",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "السرعة 70"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8788693122,
+      "lat": 31.9078945,
+      "lon": 35.865813,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 483308369,
+      "lat": 31.9246413,
+      "lon": 35.8854163,
+      "tags": {
+        "highway": "speed_camera",
+        "name": "السرعة 70"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772149554,
+      "lat": 31.9228016,
+      "lon": 35.9115857,
+      "tags": {
+        "direction": "180",
+        "highway": "speed_camera",
+        "maxspeed": "60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772144708,
+      "lat": 31.9576278,
+      "lon": 35.8883462,
+      "tags": {
+        "direction": "290",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60",
+        "name:ar": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772146473,
+      "lat": 31.9620357,
+      "lon": 35.9033034,
+      "tags": {
+        "direction": "320",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772144331,
+      "lat": 31.958189,
+      "lon": 35.9548304,
+      "tags": {
+        "direction": "200",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772150889,
+      "lat": 31.9692503,
+      "lon": 35.9429872,
+      "tags": {
+        "direction": "320",
+        "highway": "speed_camera",
+        "maxspeed": "70",
+        "name": "السرعة 70"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772142614,
+      "lat": 31.9800494,
+      "lon": 35.9329123,
+      "tags": {
+        "direction": "1",
+        "highway": "speed_camera",
+        "maxspeed": "50",
+        "name": "السرعة 50"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772147065,
+      "lat": 31.9323358,
+      "lon": 35.9797316,
+      "tags": {
+        "direction": "90",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6771949981,
+      "lat": 31.9336078,
+      "lon": 35.9945267,
+      "tags": {
+        "direction": "200",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772139119,
+      "lat": 31.9538252,
+      "lon": 35.9918754,
+      "tags": {
+        "direction": "140",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772146646,
+      "lat": 31.9684558,
+      "lon": 35.9983797,
+      "tags": {
+        "direction": "230",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6771898377,
+      "lat": 31.9810016,
+      "lon": 36.015801,
+      "tags": {
+        "direction": "200",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6771952937,
+      "lat": 31.9958572,
+      "lon": 36.0254816,
+      "tags": {
+        "direction": "90",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "السرعة 90"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13970067280,
+      "lat": 32.0214805,
+      "lon": 35.8940824,
+      "tags": {
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13970067281,
+      "lat": 32.0146839,
+      "lon": 35.9104259,
+      "tags": {
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7140588182,
+      "lat": 32.0332909,
+      "lon": 35.8634162,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772142976,
+      "lat": 32.0361214,
+      "lon": 35.8837998,
+      "tags": {
+        "direction": "190",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772151263,
+      "lat": 32.0385644,
+      "lon": 35.8967984,
+      "tags": {
+        "direction": "20",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5760149793,
+      "lat": 32.0597226,
+      "lon": 35.8700382,
+      "tags": {
+        "highway": "speed_camera",
+        "maxspeed": "90"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5760149794,
+      "lat": 32.0597314,
+      "lon": 35.8702229,
+      "tags": {
+        "highway": "speed_camera",
+        "maxspeed": "90"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6771977414,
+      "lat": 32.0030779,
+      "lon": 36.037311,
+      "tags": {
+        "direction": "210",
+        "highway": "speed_camera",
+        "maxspeed": "90",
+        "name": "السرعة 90"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13970067252,
+      "lat": 32.1321035,
+      "lon": 35.8537311,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772136671,
+      "lat": 32.1970487,
+      "lon": 35.8650768,
+      "tags": {
+        "direction": "180",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772147227,
+      "lat": 32.2425746,
+      "lon": 35.8928041,
+      "tags": {
+        "direction": "170",
+        "highway": "speed_camera",
+        "maxspeed": "60",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13970067232,
+      "lat": 32.2417469,
+      "lon": 35.8889143,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772155267,
+      "lat": 32.06492,
+      "lon": 36.07322,
+      "tags": {
+        "highway": "speed_camera",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772131630,
+      "lat": 32.08471,
+      "lon": 36.08223,
+      "tags": {
+        "highway": "speed_camera",
+        "name": "السرعة 60"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069502,
+      "lat": 32.5212787,
+      "lon": 35.4827197,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069504,
+      "lat": 32.5685022,
+      "lon": 35.3348026,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069503,
+      "lat": 32.5493101,
+      "lon": 35.4010104,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3258069501,
+      "lat": 32.6435212,
+      "lon": 35.3511828,
+      "tags": {
+        "enforcement": "traffic_signals",
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772146737,
+      "lat": 32.3219259,
+      "lon": 35.9194477,
+      "tags": {
+        "direction": "190",
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772141523,
+      "lat": 32.3538887,
+      "lon": 35.9153482,
+      "tags": {
+        "direction": "210",
+        "highway": "speed_camera",
+        "maxspeed": "100",
+        "name": "السرعة 100"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772142975,
+      "lat": 32.4968788,
+      "lon": 35.8783838,
+      "tags": {
+        "direction": "170",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772144796,
+      "lat": 32.5116355,
+      "lon": 35.8736493,
+      "tags": {
+        "direction": "170",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6772150867,
+      "lat": 32.5155118,
+      "lon": 35.8719832,
+      "tags": {
+        "direction": "0",
+        "highway": "speed_camera",
+        "maxspeed": "80"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2473113,
+      "center": {
+        "lat": 31.8712939,
+        "lon": 35.1789453
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1290322396,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 1699358210,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1960945820,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2473116,
+      "center": {
+        "lat": 31.8709202,
+        "lon": 35.1774365
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1960945822,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 1290322120,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 317289140,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 303516,
+      "center": {
+        "lat": 32.0071872,
+        "lon": 34.9535155
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 310906308,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "note": "not 100% sure its this light",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2459147,
+      "center": {
+        "lat": 32.068035,
+        "lon": 34.9331654
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1861486392,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2459148,
+      "center": {
+        "lat": 32.0681078,
+        "lon": 34.9336731
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1096829874,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 941776554,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 316956902,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2459152,
+      "center": {
+        "lat": 32.0681873,
+        "lon": 34.9385067
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 316954968,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 316955029,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1951277498,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2459153,
+      "center": {
+        "lat": 32.0680755,
+        "lon": 34.9369095
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1039528423,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 1478311297,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1369361,
+      "center": {
+        "lat": 32.0934719,
+        "lon": 34.939819
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 298084040,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 1096829859,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 265338834,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2743047,
+      "center": {
+        "lat": 32.095131,
+        "lon": 34.9375362
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 387213056,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2473166,
+      "center": {
+        "lat": 31.9028773,
+        "lon": 35.0262865
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1961001834,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2743024,
+      "center": {
+        "lat": 32.1222357,
+        "lon": 34.9035514
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 2143684903,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 878905986,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1369362,
+      "center": {
+        "lat": 32.1140646,
+        "lon": 34.9396262
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 387269837,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 316943900,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2472410,
+      "center": {
+        "lat": 32.1151652,
+        "lon": 34.9405601
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 316943899,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 387224202,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1376593,
+      "center": {
+        "lat": 32.1515715,
+        "lon": 34.92112
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 667538110,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1104339319,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 196451,
+      "center": {
+        "lat": 32.3091616,
+        "lon": 34.9016166
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 465801482,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1751162,
+      "center": {
+        "lat": 32.333207,
+        "lon": 34.9061675
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1431672163,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 1473191545,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1939699,
+      "center": {
+        "lat": 32.3425944,
+        "lon": 34.9076451
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 195313360,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 1567279488,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1939697,
+      "center": {
+        "lat": 32.3451674,
+        "lon": 34.9079079
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 369183514,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 195313364,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1567275416,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1751161,
+      "center": {
+        "lat": 32.3479987,
+        "lon": 34.9082157
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1431671845,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 195315911,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1939698,
+      "center": {
+        "lat": 32.350346,
+        "lon": 34.9081218
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 195313373,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 195313368,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1939683,
+      "center": {
+        "lat": 32.3573821,
+        "lon": 34.9086056
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 441296321,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 369669753,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1119655486,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1939682,
+      "center": {
+        "lat": 32.3739232,
+        "lon": 34.9087619
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 195313401,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 369667832,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 369667830,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1800768,
+      "center": {
+        "lat": 32.4232613,
+        "lon": 34.9070352
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1474270547,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1474270550,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1751193,
+      "center": {
+        "lat": 32.4264165,
+        "lon": 34.9080321
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1474270549,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 1474270548,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "note": "not accurate. please fix position and check if the camera is not also on the other direction.",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 1751189,
+      "center": {
+        "lat": 32.4649959,
+        "lon": 34.9140539
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 271308766,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "note": "please define the exact traffic signal.",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2731198,
+      "center": {
+        "lat": 32.4478431,
+        "lon": 34.9432655
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388944533,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 2134983798,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2775611,
+      "center": {
+        "lat": 32.4478994,
+        "lon": 34.9570952
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388966626,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 428015908,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 2165184618,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2775612,
+      "center": {
+        "lat": 32.4489016,
+        "lon": 34.9610625
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388969584,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 34495751,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2775617,
+      "center": {
+        "lat": 32.449356,
+        "lon": 34.9616609
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388565326,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 428011156,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2775625,
+      "center": {
+        "lat": 32.4497731,
+        "lon": 34.9625668
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 428011041,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 2165193719,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782410,
+      "center": {
+        "lat": 32.4651759,
+        "lon": 34.9940025
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388565396,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 2171089104,
+          "role": "device"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782428,
+      "center": {
+        "lat": 32.4972179,
+        "lon": 35.0633374
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388567135,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782429,
+      "center": {
+        "lat": 32.4973388,
+        "lon": 35.0631653
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 388567134,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782431,
+      "center": {
+        "lat": 32.501517,
+        "lon": 35.0742103
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 2171106020,
+          "role": "to"
+        },
+        {
+          "type": "node",
+          "ref": 388987042,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782466,
+      "center": {
+        "lat": 32.5028963,
+        "lon": 35.0858521
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 661435930,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2775586,
+      "center": {
+        "lat": 32.5240687,
+        "lon": 34.9143815
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 195340492,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 195340494,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "100",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2775587,
+      "center": {
+        "lat": 32.5354071,
+        "lon": 34.9156439
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 195345488,
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": 2165167687,
+          "role": "to"
+        }
+      ],
+      "tags": {
+        "enforcement": "maxspeed",
+        "maxspeed": "90",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782478,
+      "center": {
+        "lat": 32.5332615,
+        "lon": 35.1477003
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 2171125736,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 392278550,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782482,
+      "center": {
+        "lat": 32.5416652,
+        "lon": 35.1566889
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 2171130253,
+          "role": "device"
+        },
+        {
+          "type": "node",
+          "ref": 1392331337,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 2782483,
+      "center": {
+        "lat": 32.5418492,
+        "lon": 35.1566508
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 1392331071,
+          "role": "from"
+        }
+      ],
+      "tags": {
+        "enforcement": "traffic_signals",
+        "type": "enforcement"
+      }
+    }
+  ]
+}

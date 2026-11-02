@@ -1,0 +1,404 @@
+{
+  "product": {
+    "name": "Radarbot",
+    "publisher_ios": "Iteration Mobile S.L (co-development with Vialsoft)",
+    "publisher_play": "Radarbot Company (Iteration Mobile S.L + Vialsoft)",
+    "hq": "Calle Valverde 1, 28004 Madrid, Spain",
+    "tagline": "The GPS navigator expert in speed cameras. Enjoy driving!",
+    "store_ids": {
+      "ios_bundle": "id1099797635",
+      "ios_name": "Radarbot: Speed Camera GPS App",
+      "play_package": "com.vialsoft.radarbot_free",
+      "play_name": "Radarbot: Radar Detector, GPS",
+      "huawei_appgallery": "C100879467"
+    },
+    "claimed_scale": {
+      "downloads_claim": "100M+ (marketing web), 50M+ (Play listing)",
+      "community_claim": "50M (older copy) up to 100M drivers",
+      "play_downloads": "50,000,000+",
+      "play_reviews": "661K reviews, trending #3 top grossing Maps & Navigation",
+      "ios_rating": "4.6 / 97K ratings (US), 4.6 / ~95K (older snapshots)"
+    }
+  },
+  "features": [
+    {
+      "name": "Passive radar-camera alerts (offline static DB)",
+      "tier": "core",
+      "detail": "Fixed, mobile, section/average-speed (shows running average), tunnel, red-light/traffic-light, temporary fixed, accident blackspot zones, seatbelt/phone-use cameras, access-control cameras, environmental/violation-control cams, speed bumps & potholes, truck-toll control. Works in any country. Alerts fire without internet and without community reports."
+    },
+    {
+      "name": "Direction-aware alert suppression",
+      "tier": "core",
+      "detail": "Ignores cameras on the opposite direction or off-route automatically."
+    },
+    {
+      "name": "Speedometer + road speed limit limit-alert",
+      "tier": "core",
+      "detail": "Current speed vs road limit, configurable over-limit trigger; plays sound+buzz starts on radar or over-limit. Works as standalone speedometer; used alongside Google Maps/Waze."
+    },
+    {
+      "name": "Real-time community alerts",
+      "tier": "core",
+      "detail": "User-reported: traffic jams, road hazards, accidents, mobile radars, police controls, police cars following you, helicopters, drones, other incidents. Same UX family as Waze reports."
+    },
+    {
+      "name": "Background operation + works with other apps",
+      "tier": "core",
+      "detail": "Runs with screen off / locked; floating widget overlays while another navigation app is used."
+    },
+    {
+      "name": "Voice + sound alerts (real recorded human voices)",
+      "tier": "core",
+      "detail": "Marketing stresses 'voices of real people', not TTS."
+    },
+    {
+      "name": "Fully configurable warning distances",
+      "tier": "core",
+      "detail": "Distance before camera, per-vehicle-type (car, motorbike, truck, commercial) distance tuning."
+    },
+    {
+      "name": "Vibration alerts for motorcyclists",
+      "tier": "core",
+      "detail": "Phone buzz and watch vibration mode for riders (hands on bars)."
+    },
+    {
+      "name": "Bluetooth auto-connect + auto-start",
+      "tier": "core",
+      "detail": "App wakes itself when the phone pairs with the car BT (Android explicitly; iOS per purchase history). Premium-member complaint: 'worked at first then stopped'."
+    },
+    {
+      "name": "Offline navigation + 3D maps",
+      "tier": "core",
+      "detail": "GOLD: full offline nav with 3D maps, worldwide, no coverage needed. Free tier: offline radar alerts limited to one country."
+    },
+    {
+      "name": "Route with fewer speed cameras",
+      "tier": "core",
+      "detail": "Routing option optimizes for minimum radars on the route."
+    },
+    {
+      "name": "GPS navigation (turn-by-turn, lane guidance)",
+      "tier": "secondary",
+      "detail": "Lane guidance praised by a trucker; zoom depth and route quality are top user complaints."
+    },
+    {
+      "name": "Truck/HDV mode (Radarbot GOLD RoadPro)",
+      "tier": "secondary",
+      "detail": "Routes honoring weight/height restrictions, truck-specific speed limits + radar DB, longer alert distances for heavy vehicles. Includes 'Radarbot Protect' + 'Pack Truck Extension'."
+    },
+    {
+      "name": "School zone entry/exit alerts",
+      "tier": "secondary",
+      "detail": "Alerts when entering and leaving school areas plus their cameras."
+    },
+    {
+      "name": "CarPlay / Android Auto integration",
+      "tier": "secondary",
+      "detail": "On-screen alerts + nav in the car; help-center troubleshooting article exists for 'not showing in AA/CarPlay'. Runs without a destination set (a differentiator users praise)."
+    },
+    {
+      "name": "Apple Watch / Wear OS companion",
+      "tier": "secondary",
+      "detail": "Vibration alerts on the wrist while riding/driving."
+    },
+    {
+      "name": "Floating speed overlay widget",
+      "tier": "secondary",
+      "detail": "Draggable speed/notifications widget over Google Maps; compatible with Android Driving Mode 'approved list'."
+    },
+    {
+      "name": "Manual + automatic DB updates",
+      "tier": "secondary",
+      "detail": "Free tier: manual 'Update database' button (with ads). Premium: automatic updates of new radars."
+    },
+    {
+      "name": "Community camera reporting + verification",
+      "tier": "secondary",
+      "detail": "Users submit missing mobile cameras / new cameras; expert team verifies + merges into static DB."
+    },
+    {
+      "name": "Customer support in-app (side menu)",
+      "tier": "secondary",
+      "detail": "Side menu (≡) → login/register → Customer Support."
+    },
+    {
+      "name": "Account login / registration",
+      "tier": "secondary",
+      "detail": "Optional in-app account for personalized support, syncs purchases."
+    },
+    {
+      "name": "Radar list / POI browsing",
+      "tier": "nice-to-have",
+      "detail": "Browse DB cameras near you (implied by product copy and screenshots; no dedicated list-screen marketing copy found)."
+    },
+    {
+      "name": "Fleet / B2B product (Flotas)",
+      "tier": "nice-to-have",
+      "detail": "Fleet management integration, route planning with restrictions, cost savings pitch; separate web flow."
+    },
+    {
+      "name": "Developer SDK",
+      "tier": "nice-to-have",
+      "detail": "radarbot.com/desarrolladores — SDK for embedding radar data/alerts in third-party apps."
+    },
+    {
+      "name": "OBD2 speedometer sibling (Speedbot GPS/OBD2)",
+      "tier": "nice-to-have",
+      "detail": "Separate app in same publisher stable (ELM327 speedometer + 'ELM327 Test' utility) — cross-sell ecosystem of car tools."
+    }
+  ],
+  "screens": [
+    {
+      "screen": "Onboarding / first launch",
+      "elements": [
+        "Database load on first start (progress with camera count — differentiator users remark about)",
+        "Full-page interstitial ad for free users on entry (Lyft ad anecdote)",
+        "Location permission + background location permission prompt (App Store warns 'may use your location even when it isn't open')",
+        "Language selection (28 languages)",
+        "Account login/register optional prompt in side menu later"
+      ],
+      "copy_style": "Excitatory imperative: 'Drive safely and avoid tickets forever. Enjoy driving!' Second-person benefits before features. 'Put your seat belt on!' playfulness."
+    },
+    {
+      "screen": "Home / main alert screen (speedometer view)",
+      "elements": [
+        "Big analog/digital speedometer (dominant widget; most Play screenshots)",
+        "Current road speed limit next to it with over-limit coloring",
+        "Next-radar distance readout with camera-type icon",
+        "Average-speed display when approaching average-speed (section) cameras",
+        "Alert log / ticker of community incidents (jams, police, hazards)",
+        "Side menu icon (≡) → support, settings, login",
+        "Draggable floating speed widget when backgrounded"
+      ],
+      "copy_style": "Numbers-first, zero words; icons + voice do the talking while driving."
+    },
+    {
+      "screen": "Radar alert UI",
+      "elements": [
+        "Full-screen takeover color-coded by camera type (colors: red/orange gradations by proximity — Play screenshots)",
+        "Camera-type pictogram (fixed, mobile, section, tunnel, red light, blackspot...)",
+        "Distance countdown in meters, then beeps that accelerate",
+        "Voice: human-recorded spoken type + distance ('radar, 200 meters')",
+        "Speed limit + current speed pairing in the alert frame",
+        "Report button (confirm/exist mobile radar, incident) on-map flow"
+      ],
+      "copy_style": "Single-word voice callouts; UI copy near-zero."
+    },
+    {
+      "screen": "Navigation screen (GOLD)",
+      "elements": [
+        "3D offline map, route line, next-maneuver pill, lane guidance arrows",
+        "Radar icons (camera-type color-coded) overlaid along route",
+        "'Fewer-radars route' option toggle",
+        "School zone badge entry/exit",
+        "ETA / traffic events on-route",
+        "Complained zoom: too zoomed-in, can't see junctions in advance"
+      ],
+      "copy_style": "Copilot framing: 'Radarbot copilot. Put your seat belt on!'"
+    },
+    {
+      "screen": "Settings",
+      "elements": [
+        "Per-camera-type toggles (select which alerts fire — users hate that some nagger types can't be deselected)",
+        "Warning distance sliders per vehicle type",
+        "Voice profile choice (real-voice catalog), sound profile, vibration on/off",
+        "Speed limit alert threshold (fixed mph/kmh offset; users demand % over limit)",
+        "Bluetooth auto-connect/start toggle",
+        "GPS-signal-loss nag toggle (nag still fires per reviews — bug surface)",
+        "Units (km/h vs mph), language",
+        "Manual 'Update database' button (free tier) with result message"
+      ],
+      "copy_style": "Plain checkbox labels, no pedagogy. Occasional 'Completely personalized warning distances and settings' marketing."
+    },
+    {
+      "screen": "Premium paywall",
+      "elements": [
+        "Two SKU cards: Radarbot GOLD vs Radarbot GOLD RoadPro (with mascot/logo graphics)",
+        "Feature comparison table Free/Gold/RoadPro (17 rows on web version — gold-standard upsell structure)",
+        "Prices anchored: strikethrough 6€/mo → 4.99€/mo; 72€/yr → 35.99€/yr, RoadPro 10€ → 8.99€/mo; 120€ → 59.99€/yr",
+        "'Free for 1 week' trial on both monthly SKUs",
+        "'Cancel anytime. No commitment.' trust line under every CTA",
+        "'Our best offer' badge on monthly cards",
+        "Web-only checkout funnel (checkout.php) with 20% discount + email capture",
+        "'Nuestra mejor oferta' scarcity + 'Oferta por tiempo limitado'"
+      ],
+      "copy_style": "Benefit-led ('Travel always protected for only 2.99€/month'), recurring charge framed as monthly-equivalent even for annual."
+    },
+    {
+      "screen": "Radar list / detail",
+      "elements": [
+        "Map of nearby cameras with type icons",
+        "Camera detail: type, road, direction, speed limit, verification state",
+        "Report/confirm flow: add missing camera, report as gone/false",
+        "Verification state visible (community can dispute)"
+      ],
+      "copy_style": "Functional; 'Not a single radar can escape the prying eyes of Radarbot!' as personality."
+    },
+    {
+      "screen": "Community report flow",
+      "elements": [
+        "One-tap report button while driving (jam, accident, police control, hazard, mobile radar, other)",
+        "Multiple camera-type taxonomy (~17 hazard types on marketing page)",
+        "Confirmation prompt / thanks voice line",
+        "Peer confirm/dismiss for temp/mobile hazards"
+      ],
+      "copy_style": "Speed-first microcopy; report chips are icons + one word."
+    },
+    {
+      "screen": "In-car / widget surfaces",
+      "elements": [
+        "CarPlay + Android Auto app entry w/ speedometer + alerts",
+        "Android Radio (head-unit APK) install path via Play Store",
+        "Home-screen widget: speed + alert ticker (drag-resizable)",
+        "Apple Watch / Wear OS haptic alert page"
+      ],
+      "copy_style": "Integration optgen: 'Integrate Radarbot with your car's multimedia system and receive alerts while enjoying your favorite music.'"
+    }
+  ],
+  "monetization": {
+    "structure": "Freemium + two premium SKU tiers (GOLD consumer / GOLD RoadPro pro-driver) + B2B fleet + web checkout funnel",
+    "free_tier": [
+      "Unlimited-time free use (flagship claim: no trial limitations)",
+      "Radar alerts from static DB — offline limited to ONE country",
+      "Manual database update button (updates gated behind button + ad interstitial)",
+      "Ads: startup full-page interstitials, in-app placements while driving (top complaint category)",
+      "Real-time community alerts incl. jams/accidents/police",
+      "Speedometer + speed-limit alerts",
+      "Basic background operation"
+    ],
+    "gold_tier": [
+      "Worldwide offline navigation + 3D maps",
+      "Automatic DB updates",
+      "No ads",
+      "Route with fewer radars",
+      "Road speed limits + school zones",
+      "CarPlay + Android Auto",
+      "Smartwatch connectivity",
+      "Full-routes real-time traffic",
+      "BT auto-start (Android)",
+      "Floating overlay widget in background"
+    ],
+    "roadpro_extras": [
+      "Truck restriction routing (weight/height)",
+      "Truck-specific speed limits + radar DB",
+      "Extended warning distances for HDVs",
+      "Radarbot Protect module + Pack Truck Extension"
+    ],
+    "prices_web_eur": {
+      "gold_monthly": { "anchor_eur": 6.0, "offer_eur": 4.99, "trial": "free 1 week" },
+      "gold_annual": { "anchor_eur": 72.0, "offer_eur": 35.99, "pitch": "2.99€/month equivalent, annual prepay" },
+      "roadpro_monthly": { "anchor_eur": 10.0, "offer_eur": 8.99, "trial": "free 1 week" },
+      "roadpro_annual": { "anchor_eur": 120.0, "offer_eur": 59.99, "pitch": "4.99€/month equivalent" }
+    },
+    "prices_us_ios": {
+      "gold": "$5.99/mo or $35.99/yr",
+      "roadpro": "$9.99/mo or $59.99/yr (one source reported $35.99/yr — likely outdated; JustUseApp purchase records show $59.99)",
+      "iap_variants_logged": ["$5.99 GOLD", "$9.99 RoadPro", "$4.99 legacy 'Pro Version'", "$35.99 GOLD annual"]
+    },
+    "promo_structures": [
+      "Web checkout with 20% discount link campaign (radarbot.com/planes-premium → checkout.php?c=..&p=..)",
+      "Free week trial on both monthly SKUs",
+      "'Limited time offer' + best-anchor framing on monthly plans",
+      "Cancel-anytime reassurance next to every CTA",
+      "Family Sharing eligible for some IAPs (App Store listing)"
+    ],
+    "web_paywall_gap_note": "Web copy shows subscription managed through Play/App Store; separate web funnel captures trial users via email (checkout.php), which is their acquisition hedge beyond stores."
+  },
+  "data_sources": [
+    {
+      "source": "Proprietary static camera DB",
+      "detail": "'Most powerful and updated radar database in the world… team of experts performs daily updates.' History: this is a Spain-based camera-alert vendor ecosystem (Iteration Mobile + Vialsoft also shipped older camera apps); static DB is the backbone; no public evidence they license SCOPO/POIplaza, but the DB taxonomy (17 camera types incl. truck-toll and environmental cameras) matches typical European merged-DB provenance. Safe clone bet: curated proprietary DB + community edits."
+    },
+    {
+      "source": "Community collaborative reports",
+      "detail": "'Collaborative radar database… millions of users' — users submit missing cameras and mobile/temporary radars; expert team verifies and merges into static DB. Mobile radars, police controls, hazards are purely realtime."
+    },
+    {
+      "source": "Realtime crowd alerts",
+      "detail": "Waze-style: jams, accidents, hazards, police, helicopters, drones shared between the 50-100M-driver community."
+    },
+    {
+      "source": "Speed limit data",
+      "detail": "Road speed limits sold as GOLD feature, per-vehicle-type limits for trucks — implies licensed/derived road-network map data (offline maps vendor, likely TomTom/HERE-class or OSM-derived with limits enrichment; not publicly stated)."
+    },
+    {
+      "source": "Traffic data",
+      "detail": "Real-time traffic on your route sold in premium — implies commercial traffic feed or community-density-derived congestion."
+    },
+    {
+      "source": "Business map inventory",
+      "detail": "radarbot.com/mapas — 'Tu negocio en el mapa' (your business on the map) and 'Anúnciate en Radarbot' — ads product + business places layer in the app."
+    }
+  ],
+  "tech": [
+    "Offline map packs + offline camera DB (free: 1 country; premium: worldwide) — first-run full DB download inside app",
+    "Background location: alerts fire with screen off / app killed-to-background / while navigating in Google Maps; recurring iOS bug category 'app turns off when phone locked' (user quote, older versions)",
+    "Floating overlay widget (Android) + draggable speed view",
+    "Bluetooth: auto-connect + auto-start on car pairing (Android explicit; iOS has bluetooth trigger history)",
+    "CarPlay + Android Auto first-class support + help-center troubleshooting for AA/CarPlay permission failures",
+    "Apple Watch companion + Wear OS; vibration-only mode for motorcyclists",
+    "Android Automotive/Android Radio head-unit APK distributed via Play Store (runs on in-vehicle stores) + Huawei AppGallery listing",
+    "App size 322.6 MB on iOS; requires iOS 15.0+; 28 languages; category Navigation / Maps & Navigation; age 4+ (3+ Play)",
+    "Sibling stack: Speedbot GPS/OBD2 speedometer (ELM327 BT dongle), ELM327 Test — OBD2 diagnostic accessory ecosystem",
+    "B2B SDK (radarbot.com/desarrolladores) so third-party apps can embed radar alerts",
+    "Data safety (Play): collects Location, Personal info + 5 others; shares Location with third parties (ad-tech); iOS privacy label: Identifiers used to track, Contact Info linked, Location unlinked",
+    "Radarbot Protect' module marketined in RoadPro (name only — likely subscription-protection/support service)"
+  ],
+  "aso": {
+    "ios_name": "Radarbot: Speed Camera GPS App",
+    "ios_subtitle": "Radar traps, traffic & maps",
+    "play_name": "Radarbot: Radar Detector, GPS",
+    "play_short_desc": "Speedcam alerts and navigation. 100% Legal and Reliable. Never pay another fine!",
+    "ios_store_url_slugs": ["radarbot-speed-camera-gps-app", "radarbot-speed-cameras-gps", "radarbot-speed-safety-cameras"],
+    "keyword_clusters": [
+      "radar detector, speed camera, radar, detector",
+      "speed camera alerts, speed cameras, traffic, GPS, navigation",
+      "speed limit, speed trap, speedometer, average speed",
+      "avoid tickets, fine, ticket, legal, multa, radar fijo/móvil (ES cluster dominant — Spain home market)",
+      "truck, commercial vehicle, professional driver"
+    ],
+    "category": "Navigation (iOS) / Maps & Navigation (Play)",
+    "category_rank": "#3 top grossing Maps & Navigation on Play (Oct 2026 snapshot)",
+    "ratings": { "ios": "4.6 (97K US; ~95K earlier)", "play": "4.6-ish equivalent from 661K reviews listed (trending badge 4.6-ish)" },
+    "screenshot_themes_play": [
+      "Big speedometer dial centered, radar icon + distance below",
+      "Full-screen red alert card for camera proximity",
+      "3D map nav view with camera icons along route",
+      "Widget overlay on top of Google Maps",
+      "Speed-limit sign with current speed widget",
+      "Truck/roadpro route with restriction icons",
+      "Paywall comparison slide",
+      "Real-time community incident list with Waze-ish chips",
+      "Watch/carplay/AA integration shots (later set)"
+    ],
+    "icon": "Yellow/blue robot-like mascot camera/radar hybrid (per store icon asset — 'Radarbot' is a robot-with-radar mascot; brand colors yellow + navy/black, 'RB'-style face on camera lens), consistent isotipo across web SVG assets",
+    "press_quotes_used": ["DiarioMotor", "Motor16", "El País", "OkDiario", "Autopista — 'the best radar app, 100% legal' Spanish auto press"],
+    "installations_signal": "50M+ Play installs, 661K Play reviews, 97K iOS ratings — top-of-category authority; ASO moat is the 'radarbot' brand + radar-detector intents"
+  },
+  "weaknesses": [
+    { "w": "US/low-density-market realtime coverage is thin", "evidence": "500-mile US road trip: only 3 stoplight-camera alerts, zero mobile/police alerts vs Waze's 7; 'Radarbot is more relevant outside the US'; Ireland: 'not once would it let you know where a speed van is'", "clone_leverage": "Realtime muscle + US game coverage is Waze's one weak flank; a clone that fuses Waze-quality live patrols with Radarbot's offline static DB wins both." },
+    { "w": "Report pipeline is slow: new cameras take months", "evidence": "Trucker wrote 5-6 times for one new camera over ~1 year before it appeared; users report apps 'drop reported cameras'; current-date complaints about stale/undetected mobile cams", "clone_leverage": "Instant community-merge with confidence scoring + reputation weighting; show 'reported by N users yesterday' as support-level UI." },
+    { "w": "Ad UX while driving is hostile", "evidence": "Full-page ad at first launch (forced into Lyft app by mis-tap); ads pop 'at inopportune times' requiring driver to dismiss; 2021 quote: 'full screen adverts and nag to update to pro. Dangerous… while driving.'", "clone_leverage": "Never show blocking ads in-lobby/while driving fast; monetize via paywall + native placements only. Safety-first branding is both a claim and a moat." },
+    { "w": "Navigation quality is weak — zoom, confusing directions, weird routes", "evidence": "'As a navigation app it's pants… have to exit and use Google Maps' (15 helpfuls); trucker: truck routing 'very bad around cities'; map 'too zoomed in all the time'", "clone_leverage": "Beat on nav is hard; pragmatic clone play: lead with alerts, coerce Google Maps/Waze co-piloting (their own setup — 'running Radarbot in background while Google Maps gives directions is a valid setup') instead of half-breaking nav." },
+    { "w": "Off-route / irrelevant alerts", "evidence": "Red-light camera alerts for cameras 'a mile away on another street'; toll alerts at every intersection not in travel direction (2021); police-station alerts that are 'absolutely meaningless'; no per-type warning selection per early users", "clone_leverage": "Route-relative geofencing with bearing gating + per-category mute; this is pure engineering win." },
+    { "w": "Subscription trust friction", "evidence": "Whole industry of cancel-radarbot-refund helper sites exists (Stopee, Postclic, Unstar); accidental-family purchase anecdote rescue (positive, but shows family mishaps); 'Can't make payment to subscribe' report", "clone_leverage": "Transparent cancel-in-two-taps, clear renewal disclosure, grace-period restore — attacks the cancel-scam-aid industry niche and converts trust into LTV." },
+    { "w": "Support responsiveness is a known pain", "evidence": "'No support link at all… 10 days no reply', 'support is non existent', review answered 2 years later", "clone_leverage": "24h support SLA + in-app issue wizard that auto-attaches location-cam context." },
+    { "w": "Free-tier friction fills users with resentment", "evidence": "Manual daily DB update required (free tier) with connection-error failures ('connection error occurred' in Pakistan); slow first-load when offline; ads on top", "clone_leverage": "Auto-sync free tier when online + proper offline cache failure UX; free tier that actually feels free converts better." },
+    { "w": "Speed-limit threshold UX rigid", "evidence": "Top-rated Play review begs for percentage-over-limit instead of fixed 5 mph offset (UK: 5 mph over a 30 limit is a fine)", "clone_leverage": "Percent or adaptive tolerance per speed band — trivial build, category-satisfying." },
+    { "w": "Alert delivery routing quirks", "evidence": "Bluetooth audio hijack: alerts always play over car BT even when user sets phone-only; background-kill/locked-screen stop in some iOS versions; auto-start fails silently for some pro users", "clone_leverage": "Audio-route respect + explicit alert-channel picker (BT only vs phone only vs both) — direct review-section wins." },
+    { "w": "Static-DB error correction takes forever responsiveness-loop", "evidence": "Camera confirmation/dispute is opaque; 'very hard to figure out how to report errors in the database' (1 year of use)", "clone_leverage": "One-tap confirm/correct on every alert; gamified validator league like Waze points." }
+  ],
+  "sources": [
+    "https://apps.apple.com/us/app/radarbot-speed-camera-gps-app/id1099797635 (iOS store listing, description, privacy label, pricing tier names, 4.6/97K)",
+    "https://play.google.com/store/apps/details?id=com.vialsoft.radarbot_free&hl=en_US (Android listing, 661K reviews, 50M+ installs, #3 top grossing, data safety, curated user reviews)",
+    "https://radarbot.com/ (official marketing site: camera taxonomy, personas, downloads claim 100M, 4.6 rating, press quotes, fleet/SDK/ads pages)",
+    "https://www.radarbot.com/planes-premium/ (full premium plan matrix + EU price points + trial mechanics)",
+    "https://ryryjanssen.com/radarbot-app-review/ (independent review: USD price points, pros/cons list)",
+    "https://justuseapp.com/en/app/1099797635/radarbot-speedcams-detector/reviews (IAP price records, user review corpus with complaint quotes)",
+    "http://html.duckduckgo.com/html/?q=radarbot+app+store (discovery: real store URLs, Huawei AppGallery id, help center)",
+    "http://html.duckduckgo.com/html/?q=radarbot+subscription+billing+complaint+refund (cancel-refund ecosystem: unstar.app, stopee, postclic, help.radarbot.com articles)",
+    "https://help.radarbot.com/en/articles/14284402-radarbot-not-showing-in-android-auto-or-carplay (CarPlay/AA troubleshooting; permissions dependency)",
+    "https://help.radarbot.com/en/articles/10767369-how-to-use-radarbot-with-car-multimedia-systems-android-radio (Android head-unit install path)"
+  ],
+  "fetch_notes": "13 fetches. iteration-mobile.com/radarbot 404 (site moved to radarbot.com), apps.apple.com/es/.../id994406776 404 (wrong id — real id 1099797635), trustpilot 403. DuckDuckGo html endpoints and store listing pages fetched fine."
+}

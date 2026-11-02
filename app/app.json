@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "Nazra نظرة",
+    "slug": "nazra-jo",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "scheme": "nazra",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "jo.nazra.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "نظرة تعرض الكاميرات القريبة وينبّهك قبلها.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "نظرة تضل منبّهك بالكاميرات حتى الصفحة مقفلة.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": false
+        }
+      }
+    },
+    "android": {
+      "package": "jo.nazra.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "POST_NOTIFICATIONS",
+        "ACCESS_NETWORK_STATE",
+        "VIBRATE"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#14131A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "date": "2026-11-02",
+    "method": "web research via DuckDuckGo HTML + Bing endpoints, ~15 fetch cap",
+    "confidence_notes": "Fields marked 'unverified' need local confirming; all others trace to cited URLs."
+  },
+
+  "cameras": {
+    "operators": [
+      {
+        "name": "Greater Amman Municipality (GAM / أمانة عمان الكبرى) — Traffic Directorate of GAM",
+        "scope": "Within Amman city limits (avg-speed corridors, speed radars, red-light/traffic-light cameras, AI seatbelt+phone cameras)",
+        "facts": [
+          "Apr 2026: new integrated system activated — 9 point-to-point average-speed measuring corridors (shaped on Airport Street AND Jordan Street), 20 traffic-light cameras, 21 speed radars (counts vary slightly across GAM statements: another statement says 20 radars); fully operational by Apr 28 2026 [khaberni 801147, Al-Mamlaka via GAM spokesman Nasser Rahamneh]",
+          "Overall program: 5,500 cameras by end of 2026 ('Smart Amman' vision) [garaanews 404026]",
+          "History: 19 speed cameras activated 2017-2018 after 4-month trial (Al-Irsal/Hadi Mosque, Marj Al Hamam...); second phase 22 cameras incl. 12 at street sides & traffic lights [royanews 13145; media.ammancity.gov.jo]",
+          "AI cameras flag phone use + no seatbelt, from ~2025: 11 cameras then, now expanding [ammanvoice 85501; royanews 67689]",
+          "Locations chosen from accident/dangerous-violation studies; signed 'warning before monitored zone' [thisisamman 16398; khaberni]"
+        ],
+        "sources": [
+          "https://www.khaberni.com/news/801147-greater-amman-municipality-camera-locations-selected-based-on-accident-and-dangerous-violation-studies",
+          "https://garaanews.com/article/404026",
+          "https://en.royanews.tv/news/13145/19-Speed-cameras-activated-in-Amman-(and-where-to-find-them)",
+          "https://media.ammancity.gov.jo/En/NewsDetails/The_Greater_Amman_Municipality_launches_the_second_phase_of_operating_22_new_cameras",
+          "https://en.royanews.tv/news/67689/Amman-rolls-out-new-smart-traffic-cameras-across-key-roads",
+          "https://ammanvoice.net/article/85501",
+          "https://www.thisisamman.com/en/16398/new-traffic-radars-just-went-live-in-amman-heres-how-to-avoid-a-fine"
+        ]
+      },
+      {
+        "name": "Central Traffic Directorate / Public Security Directorate (إدارة السير المركزية — الأمن العام)",
+        "scope": "Kingdom-wide: desert highway + intercity radars, CCTV network, checkpoints, patrol cars",
+        "facts": [
+          "PSD stated ~2,500 CCTV cameras across Jordan's streets, with AI + drones used in traffic management [jonews24]",
+          "AI systems branded in Jordanian press as 'عين الصقر' (Eagle Eye) for violation detection [royanews 389389]",
+          "External Patrol Directorate (إدارة الدوريات الخارجية) does intercity speed enforcement; caught cars at 200-203 km/h on Zarqa-Azraq road vs 100 km/h posted [addustour 1593359]",
+          "Fixed radars also inside Zarqa corridor operated by CTD/related bodies; new cameras announced one-by-one via radio/social traffic alerts"
+        ],
+        "sources": [
+          "https://jonews24.com/2500-كاميرا-تراقب-شوارع-الأردن-الأمن-يوضح/",
+          "https://royanews.tv/news/389389/كاميرات-الذكاء-الاصطناعي-و\"عين-الصقر\"-في-الأردن:-تقنيات-حديثة-لرصد-المخالفات-والسلامة-المرورية",
+          "https://admin.addustour.com/articles/1593359-سرعات-صادمة-على-طريق-الزرقاء-الأزرق-مركبتان-تتجاوزان-200-كم-ساعة"
+        ]
+      },
+      {
+        "name": "Vendor: Traffic Tech (traffic-tech.jo)",
+        "scope": "Private Jordanian integrator 'pioneer in traffic enforcement technology in Jordan' — installs radars & speed cameras for authorities",
+        "sources": ["https://traffic-tech.jo/projects/radars-and-cameras/"]
+      }
+    ],
+    "camera_types_in_use": [
+      "Fixed spot-speed radar cameras (urban + intercity posts on poles near crossings/descents)",
+      "Average-speed point-to-point corridors (ينبغي تنبيه double-read; currently Amman-only: 9 corridors on Airport St & Jordan St) — defeats brake-at-radar trick",
+      "Red-light / traffic-light cameras at signalized intersections (~20 in 2026 phase)",
+      "AI-looking cameras for phone & seatbelt (Applies over multiple lanes)",
+      "Mobile radar vans/check points (patrols, rotating) — anecdotal; stationary-checkpoint culture remains strong",
+      "CCTV surveillance (2,500 cameras PSD-wide, mostly not automated enforcement)"
+    ],
+    "gatso_or_other_brand": "No source found identifying Gatso or any specific brand in Jordan. Vendors include Traffic Tech; press calls systems 'smart radars'/'smart cameras'. Treat brand as unverified.",
+    "violations_enforced": [
+      "speeding",
+      "red-light running",
+      "unsafe lane changes",
+      "illegal stopping / parking on pedestrian crossings",
+      "mobile-phone use while driving (JD 50 fine per bestroadtrip) [https://bestroadtrip.com/driving-in/jordan]",
+      "no seatbelt",
+      "unauthorized modifications (Europcar summary of Traffic Law: 'danger alert or multi-sounds for unauthorized vehicles', subwoofer, body additions) [https://www.europcar.jo/pages/jordan-traffic-law-and-fines]"
+    ]
+  },
+
+  "speed_limits_aggregated": {
+    "currency": "km/h",
+    "urban_built_up": "50-60 (residential ~50, city centres 60) [eldoradojo, drivingdirections]",
+    "amman_ring_and_main_streets": "60-80 typical; specific corridor 70 km/h noted round 'المقابلين' radar [garaanews]",
+    "rural_open_roads": "80-100 [drivingdirections]",
+    "amman_zarqa_highway": "High-quality dual carriageway; adjacent Zarqa-Azraq road posted 100 [addustour 1593359]. Amman-Zarqa specifics (60 vs 80 vs 100) not directly sourced — verify per-segment on ground.",
+    "dead_sea_highway_road65": "Not directly sourced; gentle descents + sharp village entries; norm for similar Jordanian roads ~80-100. Verify with SIGNS on the ground.",
+    "desert_highway_amman_aqaba_r15": "120 [multiple: internationaldriverlicence.org 'Desert Highway 120 km/h'; nostosroute 'top speed 110 on Desert Highway' (conflicts — one says 110)]",
+    "motorway_default": "120 max on fastest class [drivingdirections.com/jo/speed-limits, bestroadtrip]",
+    "sources": [
+      "https://www.eldoradojo.com/blog/driving-in-jordan-rules-road-signs-traffic-laws",
+      "https://www.drivingdirections.com/jo/speed-limits",
+      "https://bestroadtrip.com/driving-in/jordan",
+      "https://www.internationaldriverlicence.org/drive-in/jordan/with-uae-license",
+      "https://nostosroute.com/international-driving-guide/jordan",
+      "https://admin.addustour.com/articles/1593359-سرعات-صادمة-على-طريق-الزرقاء-الأزرق-مركبتان-تتجاوزان-200-كم-ساعة"
+    ],
+    "resting_notes": [
+      "NostosRoute: unmarked speed bumps appear at edge of nearly every village on Desert Highway and King's Highway — accounts for 'rumble' driver fear on Dead Sea/King's road [https://nostosroute.com/international-driving-guide/jordan]",
+      "One toll road exists; bestroadtrip mentions single toll road + Aqaba customs stop at city entry [bestroadtrip]"
+    ]
+  },
+
+  "locations": {
+    "most_feared_amman_urban": [
+      "Airport Street & Jordan Street (Queen Alia Road axis: الشارع الملكة علياء / شارع المطار): 9 average-speed point-to-point corridors — the highest-stake axis in the country [khaberni]",
+      "Airport Rd Landmark Hotel descent (النزول) — radar both directions [garaanews]",
+      "الحزام (Attar/Hijaz road) toward Amman customs [garaanews]",
+      "عين غزال descent (dangerous slope) [garaanews]",
+      "خلدا: right after the tunnel toward Hussein Gardens [garaanews]",
+      "شارع متصاشل ياجوز: after Special Forces bridge, before tank-command entrance [garaanews]",
+      "المقابلين (Mutq'a-lin): across from Sobhi Abu Ghalous BLDG; 70 km/h [garaanews]",
+      "شارع الملك عبدالله الأول (new) [garaanews]",
+      "طريق المطار from Kherbet al-Souk [garaanews]",
+      "عبدون descent to Yasmeen [garaanews]",
+      "دا بو (Dabouq): after Nesr signal toward 'Al-Bakaloria' [garaanews]",
+      "بيادر وادي السير: after UNRWA BLDG (first Abu Al-Sous descent) [garaanews]",
+      "شارع مكة: after Makka Mall toward Shabab circle [garaanews]",
+      "شارع الجاردنز: after Jabri signal toward Oasis Circle [garaanews]",
+      "شارع المطل: from Qreiqaish circle to Al-Yasmeen [garaanews]",
+      "طريق السلط: after Umm Al-Na'aj bridge toward Amman [garaanews]",
+      "وسط البلد: after Mabrouk bridge toward Reghadan [garaanews]",
+      "الدوار الرابع → الخامس (4th→5th circle) axis [garaanews]",
+      "Legacy 2017-18 19-camera cluster incl. Al-Irsal traffic lights (Hadi Mosque), Marj Al Hamam lights [royanews 13145]"
+    ],
+    "zarqa_corridor": [
+      "Amman-Zarqa 'Autosterad' road: NEW speed cams — near 'Kazia Sherim' (كازية شريم) toward Amman [nabd 154899232, Instagram reel 2025]; another fresh camera alert on Amman-Zarqa [facebook/husna.news video]",
+      "Zarqa-Azraq road: 100 km/h posted; drivers caught at 200-203 by External Patrols [addustour 1593359]"
+    ],
+    "other_intercity": [
+      "Desert Highway R15 (Amman-Ma'an-Aqaba): 110-120 km/h, straight fast south route [viamo; jordan-spirit]; village-edge unmarked speed bumps; police checkpoints along route",
+      "Dead Sea Highway (Road 65): steep, hairpin, village edges with speed bumps — 'rumble' reputation among drivers (qualitative; not camera-dense from this research)",
+      "Aqaba: customs/police checkpoint at city entry [bestroadtrip]",
+      "Irbid & Ajloun & north (Route 35 corridor): urban 50-60 enforcement, no corridor count sourced"
+    ],
+    "crowd_sourced_alert_culture": [
+      "Jordanian radio + FB pages post per-day 'new camera here' alerts (Husna FM, Nabd reposts) — proof of appetite the app should digitize [people's video links above]",
+      "GAM itself says locations are 'announced with very clear addresses' to maximize compliance, not trick — supports an official location-list pairing [khaberni]"
+    ]
+  },
+
+  "data_sources": {
+    "official": {
+      "jordan": "No public GeoJSON/CSV of camera sites found. GAM announces via press lists (street-level text), and on amman.jo eServices pages.",
+      "violation_lookup": "Fine inquiry e-service: www.amman.jo/ar/eservices/forigntkts.aspx; hotline 102 / 117180 [amman.jo]",
+      "darak": "Unverified — not researched in depth; check separate police app for report features."
+    },
+    "osm": {
+      "query_attempt": "Overpass count of highway=speed_camera + enforcement=maxspeed in Jordan bbox returned HTTP 406 (blocked from this fetcher) — count not obtained; do an OSM-tag audit in JOSM/Overpass-Turbo directly.",
+      "assessment_pre_fetch": null,
+      "practical": "OSM Jordan urban roads are increasingly complete on主干 streets; enforcement nodes sparse. Building a Jordan camera DB will require: press-list scraping (garaanews-style articles annual), radio/FB crowd alerts, community verification campaign (JOSM + app-side 'confirm/deny' flow)."
+    },
+    "commercial_dbs": [
+      "SCDB.info sells a Jordan country database (JOR) [https://www.scdb.info/en/countrycameralist/JOR/1/]",
+      "PhotoEnforced has a Jordan page (aggregated red-light/speed listings, quality unknown) [https://www.photoenforced.com/Jordan.html]"
+    ],
+    "apps_jordanians_use_now": [
+      "Google Maps (speed-camera warnings in Jordan: user-generated, inconsistent; qualitative)",
+      "Waze — heavy in Amman driving scene (routes around radar/checkpoints; community comments/pop counts unverified here) [described for Arab world: aramobi.com Waze guide]",
+      "Radarbot (Radarbot كاشف الرادارات '(ساهر)') — Arab-localized speed camera/speed limit alert app, distributed on APKPure + App Store [apkpure/net/ar; apps.apple.com/sa id1099797635]",
+      "Speed Camera Radar (gvluky) — available in region stores (generic; unverified usage)"
+    ],
+    "productized_gap": "No Jordan-local camera/speed app surfaced in searches; local flavor is ceded to global apps + radio/FB alerts. That IS the market."
+  },
+
+  "market": {
+    "currency": "JOD (JD); USD 1 ≈ 0.71 JD; fines scale JD ~20-75+ (JD 50 for phone [bestroadtrip])",
+    "price_sensitivity": "high for subscriptions; sub-JD 1.4 one-off IAP acceptable; APKfree/Radarbot-APKPure presence signals piracy/sideload workaround culture [apkpure]",
+    "payments": {
+      "google_play": "Google Wallet supported in Jordan — cards via AJIB (min balance JOD 5 + online-shopping limit toggle), Al Rajhi Jordan, other jordanean banks [support.google.com/wallet/answer/12059326 (co=GENIE.CountryCode=JO); ajib.com/google-pay; alrajhibank.com.jo/en/google-pay]",
+      "apple": "Apple Pay live with Capital Bank, Jordan Commercial Bank (Tejari Pay) [capitalbank.jo; jcbank.com.jo/en/apple-pay]; Apple account payment methods page applies [support.apple.com/en-us/111741]",
+      "implication": "IAP works for carded users; but expect ~big share needing voucher/sideload/forF distribution (telecom carriers Zain/Umniah/Orange-JO) — unverified in this burst, design for it."
+    },
+    "app_store_environment": "Jordan localized Play listing (hl=ar&gl=JO examples), categories trending in searches: news (Roya, Khaberni, Nabd), payments (Tejari Pay), shopping/wallet; careem & delivery omnipresent (qualitative).",
+    "media_channels": [
+      "Radio (Husna FM etc.) publishes new-camera alerts by phone-in — the native channel for the community-report mechanic",
+      "Facebook news pages dominate local traffic info (videos of new camera installs get engagement)",
+      "Nabd aggregator reposts traffic alerts"
+    ],
+    "fan_positions": [
+      "'Smart Amman' narrative: officials deny 'جباية' (revenue-harvest) intent, emphasize safety ('أمن وليس جباية') [garaanews 404026]",
+      "Privacy/legal debate on AI cameras looking INTO vehicles (phone/seatbelt) предваряется by legal commentators declaring some types 'unconstitutional' claims [nabd 153037435; aldarnews 76676] — maintaining moderate positioning instead of 'beat the fuzz' helps"
+    ]
+  },
+
+  "dialect_legal": {
+    "dialect": {
+      "aa_flags": [
+        "'شرطة مرور' — traffic police (standard, used constantly)",
+        "'مخطاف' — common Amman slang for speed camera / radar post (heard broadly; dictionary trace not found in this research — verify with local reviewers before shipping tattoos/aggressive copy)",
+        "'تفليحة' (taqliha) — 'drive/adventure'; positive driver-culture word",
+        "'تقليعة' variant spelling; 'خفة' light-footed driving; 'عكر وجه' to nokpout someone",
+        "Street names live in 'فولتارشو' style menus: شارع المطار (Airport St), الأوتوستراد (Autosterad, the Amman-Zarqa), الحزام، الدورات (circles), رمثا/اربد points"
+      ],
+      "careful": "Dialect entries above include items not directly verified in fetched sources; treat as 'local-flavor hypothesis requiring native review' except those sourced from the fetched articles (route names, 'كازية', 'الدورات', 'أوتوستراد', 'كتاب' بlegislative citations)."
+    },
+    "legal": {
+      "radar_detector_hardware": "Grey zone: no criminal offense, possession not (clearly) illegal, but device may be seized; approximate fine 50-150 EUR; enforcement level 'lax'. GPS-based camera-alert apps are legal. Laser jammers illegal. [Fuel prices.eu Jordan page — USE AS indicative, not statute: https://www.fuel-prices.eu/radar-detector-laws/jordan/]",
+      "camera_alert_apps": "Legal; no Jordanian statute surfaced restricting community reporting of checkpoints/cameras. Waze-style reporting remains widespread in region.",
+      "traffic_law_enforcement_notes": [
+        "Posting of limits + warning signs before zones is a legal ceremony GAM emphasizes (forewarn = compliance) [thisisamman; khaberni] — app mirror: give 1-2 km pre-warning to build goodwill",
+        "Vehicle mods incl. unauthorized sound/devices already Criminal-adjacent via Traffic Law ['add unauthorized illegal options to body', 'danger alert/multi-sounds' Europcar summary] — keep feature integration to GPS-based alerting to stay clean",
+        "AI camera privacy debate active — product copy should champion safety + fairness, not 'beating the radar'"
+      ],
+      "ja_app_constraints": [
+        "Do NOT ship laser jammer features",
+        "Prefer OSM-style attribution + community confirm flow over scraped commercial DB",
+        "Localize AR (Jordanian-friendly) with EN fallback",
+        "Certificate of legitimacy: cite official fine-inquiry channels (102 / amman.jo) for value-add (violation status screen)"
+      ]
+    }
+  },
+
+  "sources": [
+    "https://www.khaberni.com/news/801147-greater-amman-municipality-camera-locations-selected-based-on-accident-and-dangerous-violation-studies",
+    "https://garaanews.com/article/404026",
+    "https://en.royanews.tv/news/13145/19-Speed-cameras-activated-in-Amman-(and-where-to-find-them)",
+    "https://media.ammancity.gov.jo/En/NewsDetails/The_Greater_Amman_Municipality_launches_the_second_phase_of_operating_22_new_cameras",
+    "https://en.royanews.tv/news/67689/Amman-rolls-out-new-smart-traffic-cameras-across-key-roads",
+    "https://ammanvoice.net/article/85501",
+    "https://www.thisisamman.com/en/16398/new-traffic-radars-just-went-live-in-amman-heres-how-to-avoid-a-fine",
+    "https://je.motory.com/AR/... (jo.motory.com Arabic camera-shape explainer)",
+    "https://jo.motory.com/en/news/jordan-traffic-law-and-fines-2023-15445/",
+    "https://www.europcar.jo/pages/jordan-traffic-law-and-fines",
+    "https://bestroadtrip.com/driving-in/jordan",
+    "https://www.eldoradojo.com/blog/driving-in-jordan-rules-road-signs-traffic-laws",
+    "https://www.drivingdirections.com/jo/speed-limits",
+    "https://www.internationaldriverlicence.org/drive-in/jordan/with-uae-license",
+    "https://nostosroute.com/international-driving-guide/jordan",
+    "https://admin.addustour.com/articles/1593359-سرعات-صادمة-على-طريق-الزرقاء-الأزرق-مركبتان-تتجاوزان-200-كم-ساعة",
+    "https://jonews24.com/2500-كاميرا-تراقب-شوارع-الأردن-الأمن-يوضح/",
+    "https://royanews.tv/news/389389/...",
+    "https://traffic-tech.jo/projects/radars-and-cameras/",
+    "https://www.scdb.info/en/countrycameralist/JOR/1/",
+    "https://www.photoenforced.com/Jordan.html",
+    "https://apkpure.net/ar/radarbot-radar-detector-gps/com.vialsoft.radarbot_free",
+    "https://apps.apple.com/sa/app/radarbot-كاشف-الرادارات-ساهر/id1099797635?l=ar",
+    "https://support.google.com/wallet/answer/12059326?co=GENIE.CountryCode%3DJO",
+    "https://www.ajib.com/google-pay",
+    "https://www.alrajhibank.com.jo/en/en/google-pay",
+    "https://www.capitalbank.jo/en/personal/apple_pay",
+    "https://www.jcbank.com.jo/en/apple-pay",
+    "https://www.fuel-prices.eu/radar-detector-laws/jordan/",
+    "https://nabd.com/s/154899232-a12528/تنبيه-مروري-...-كازية-شريم",
+    "https://www.facebook.com/husna.news/videos/...امان-الزرقاء/755049157240175/",
+    "https://www.amman.jo/ar/eservices/forigntkts.aspx",
+    "https://aramobi.com/m-apps-download/تحميل-تطبيق-waze-لخدمات-الخرائط-والقيادة/"
+  ]
+}
