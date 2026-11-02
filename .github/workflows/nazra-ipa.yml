@@ -1,0 +1,75 @@
+name: Nazra unsigned IPA
+
+# Builds a REAL, UNSIGNED .ipa on GitHub's hosted macOS runner.
+# No Apple credentials needed. The artifact installs via Sideloadly
+# (drag .ipa -> enter Apple ID -> sign -> phone).
+#
+# 1) Push this repo to GitHub.
+# 2) Actions tab -> "Nazra unsigned IPA" -> Run workflow.
+# 3) Download artifact nazra-unsigned.ipa from the run page.
+# 4) Sideloadly on Windows (needs iTunes installed) -> drag .ipa -> sign -> install.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: ["app/**", ".github/workflows/nazra-ipa.yml"]
+
+jobs:
+  build-ipa:
+    runs-on: macos-15
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install deps
+        working-directory: app
+        run: npm ci --no-audit --no-fund
+
+      - name: Expo prebuild (iOS, generates ios/ if missing)
+        working-directory: app
+        run: npx expo prebuild --platform ios --no-install
+
+      - name: Pod install
+        working-directory: app/ios
+        run: pod install --repo-update
+
+      - name: xcodebuild (unsigned, iphoneos SDK)
+        working-directory: app/ios
+        run: |
+          set -euo pipefail
+          xcodebuild -workspace Nazra.xcworkspace \
+            -scheme Nazra \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=''
+
+      - name: Package Payload -> .ipa
+        working-directory: app/ios/build/Build/Products
+        run: |
+          set -euo pipefail
+          APP=$(find . -maxdepth 1 -name "Nazra.app" | head -1)
+          if [ -z "$APP" ]; then echo "ERROR: Nazra.app not found"; ls -la; exit 1; fi
+          rm -rf Payload
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -qry nazra-unsigned.ipa Payload -x "Payload/Nazra.app/_CodeSignature"
+          unzip -l nazra-unsigned.ipa | head -20
+          du -h nazra-unsigned.ipa
+
+      - name: Upload artifact .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: nazra-unsigned-ipa
+          path: app/ios/build/Build/Products/nazra-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14

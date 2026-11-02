@@ -73,8 +73,10 @@ cd preview; python -m http.server 8766 --bind 127.0.0.1
 python tools\import_osm.py       # Overpass -> tools/out/osm_raw.json
 python tools\merge.py            # -> preview/data/radars.json
 ```
-### Real `.ipa` (Apple paid dev, w/o owning a Mac)
-Read **`books/IPA.md`** — Route A (Codemagic) is the fastest Windows path;
+### Real `.ipa` — two ready routes
+Read **`release/ios/FAST_IPA.md`** — the fast one:
+- **Route A (free, no Apple dev account):** the pre-built workflow `.github/workflows/nazra-ipa.yml` compiles a real unsigned `nazra-unsigned.ipa` on GitHub's macOS runner → drag into **Sideloadly** on this PC → signed + installed on your phone in minutes.
+- **Route B (signed, needs your Apple Developer account):** `app/codemagic.yaml` → Codemagic → signed `nazra.ipa`.
 `app/codemagic.yaml` + `app/eas.json` are already wired.
 
 ## What's not yet (honest)
