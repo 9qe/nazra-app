@@ -6,6 +6,8 @@ import { distKm, bearing, avgSpeedKmH, clamp, distanceAlongM, pushRoutePoint } f
 import { nearest, pickAlert, markSpoken } from './lib/alerts.js';
 import { GLYPH, TYPE_WORD, toArNum, fmtNear, announce } from './lib/ui.js';
 import { createVoice } from './lib/voice.js';
+import { geocode, directions, hasMapboxToken, fmtRouteDist, fmtRouteDur,
+  MAPBOX_TOKEN_KEY, ROUTING_ERRORS } from './lib/routing.js';
 
 const $ = (id) => document.getElementById(id);
 
@@ -19,6 +21,9 @@ const state = {
   screen: 'onboarding',
   actx: null,
   demo: null, trail: null,
+  // navigation session (destination mode) — in-memory only, privacy-first
+  nav: { phase: 'idle', destHit: null, options: [], pickedIdx: -1, liveRoute: null,
+    offCount: 0, lastRerouteAt: 0, line: null, destMk: null },
   opts: { blob: '#EDEFF6', preDist: 500, threshold: 10, voice: 'both', vibe: true, msa: false,
     avgShow: true, avgWarn: true, bgoff: true, share: true, flash: true },
   voiced: {}, lastSpoke: 0,
@@ -66,7 +71,7 @@ async function boot() {
   const h = (location.hash || '').replace('#', '');
   state.pack = await (await fetch('./data/radars.json')).json();
   state.items = mergeItems(state.pack);
-  setupSheetTabs(); bindReport(); bindSettings(); bindList();
+  setupSheetTabs(); bindReport(); bindSettings(); bindList(); bindNavigation();
   $('btn-loc').onclick = async () => {
     voice.ensureAudio();
     if ('serviceWorker' in navigator) { try { await navigator.serviceWorker.register('./sw.js'); } catch { } }
@@ -78,7 +83,7 @@ async function boot() {
     if (!state.map) await startLive({ quiet: true });
     go('home'); startDemo();
   };
-  go(['home', 'list', 'report', 'settings'].includes(h) ? h : 'onboarding');
+  go(['home', 'list', 'report', 'settings', 'search', 'route'].includes(h) ? h : 'onboarding');
   initIfL();
 }
 function initIfL() {
@@ -180,6 +185,7 @@ function onPos(p) {
   }
   pushRoutePoint(state.route, { lat: state.pos[0], lng: state.pos[1], t: p.timestamp });
   dropMe(); drawHud(); tickCorridor(); alertEngine();
+  navTick();
 }
 
 /* ---------- HUD (single nearest scan feeds limit, next, pill and courtesy) ---------- */
@@ -395,6 +401,196 @@ $('btn-hud').onclick = () => go('list');
 $('btn-report').onclick = () => go('report');
 $('btn-stop').onclick = () => stopDemo();
 
+/* ---------- navigation mode (destination) ---------- */
+function bindNavigation() {
+  $('btn-navsearch').onclick = () => openSearch();
+  $('destbar').onclick = () => {
+    if (state.nav.phase === 'navigating') { cancelNav(); return; }
+    openSearch();
+  };
+  $('btn-navcancel').onclick = () => cancelNav();
+  $('btn-back-4').onclick = () => go('home');
+  $('btn-back-5').onclick = () => go('search');
+  const list = $('DestResList');
+  list.addEventListener('click', e => {
+    const li = e.target.closest('li[data-idx]'); if (!li) return;
+    pickDestination(state.nav.searchHits[+li.dataset.idx]);
+  });
+  $('RouteOptList').addEventListener('click', e => {
+    const li = e.target.closest('li[data-idx]'); if (!li) return;
+    state.nav.pickedIdx = +li.dataset.idx;
+    [...$('RouteOptList').children].forEach(c => c.classList.toggle('on', c === li));
+    $('btn-startroute').disabled = false;
+  });
+  $('btn-startroute').onclick = () => startNav();
+  const inp = $('dest-search');
+  let deb = null;
+  inp.addEventListener('input', () => {
+    clearTimeout(deb);
+    deb = setTimeout(() => runSearch(inp.value.trim()), 350);
+  });
+}
+function openSearch() {
+  go('search');
+  const has = hasMapboxToken();
+  $('token-note').hidden = has;
+  $('DestResList').innerHTML = has
+    ? '<li class="static">اكتب كلمة — نتائج حيّة من خرائط Mapbox</li>'
+    : '<li class="static">أضف مفتاح Mapbox من الإعدادات للبحث الحيّ</li>';
+  $('dest-search').focus();
+}
+let searchDeb = null;
+async function runSearch(q) {
+  const list = $('DestResList');
+  if (q.length < 3) return;
+  list.innerHTML = '<li class="static">… عم نعنّط</li>';
+  const r = await geocode(q, { near: state.pos, lang: 'ar' });
+  if (!r.ok) {
+    list.innerHTML = `<li class="static">${r.error.message}</li>`;
+    return;
+  }
+  state.nav.searchHits = r.hits;
+  list.innerHTML = r.hits.map((h2, i) => `
+    <li data-idx="${i}">
+      <div class="t-ic" style="border-color:#7ED0FF">📍</div>
+      <div><b>${escHtml(h2.name)}</b><small>${escHtml(h2.subtitle)}</small></div>
+    </li>`).join('');
+}
+function escHtml(s) {
+  return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+async function pickDestination(hit) {
+  if (!hit || !state.pos) { toast('شغّل الموقع أولاً'); return; }
+  state.nav.destHit = hit;
+  go('route');
+  $('route-lead').textContent = `وجهة: ${hit.name}`;
+  $('RouteOptList').innerHTML = '<li class="static">… نجيب المسارات</li>';
+  $('btn-startroute').disabled = true;
+  const r = await directions(state.pos, hit.geo, { bearingDeg: state.heading || null });
+  if (!r.ok) {
+    $('RouteOptList').innerHTML = `<li class="static">${r.error.message}</li>`;
+    return;
+  }
+  state.nav.options = r.options;
+  state.nav.pickedIdx = 0;
+  $('RouteOptList').innerHTML = r.options.map((o, i) => `
+    <li data-idx="${i}" class="${i === 0 ? 'on' : ''}">
+      <div class="t-ic" style="border-color:#2FBF71">🚗</div>
+      <div><b>${fmtRouteDist(o.distanceM)} · ${fmtRouteDur(o.durationS)}</b>
+      <small>${escHtml((o.maneuvers || []).slice(0, 3).map(m => m.instruction || m.modifier).join(' ← ')) || 'مسار مباشر'}</small></div>
+    </li>`).join('');
+  $('btn-startroute').disabled = false;
+}
+function startNav() {
+  const o = state.nav.options[state.nav.pickedIdx];
+  if (!o || !state.nav.destHit) return;
+  state.nav.phase = 'navigating';
+  state.nav.offCount = 0; state.nav.lastRerouteAt = 0;
+  state.nav.liveRoute = o;
+  drawNavRoute(o);
+  $('destbar-txt').textContent = state.nav.destHit.name;
+  $('destbar').querySelector('.d-ico').textContent = '🧭';
+  if ($('navstrip').hidden) $('navstrip').hidden = false;
+  $('sheet').hidden = true;
+  go('home');
+  toast('وصلنا — اتبع الخط 🧭');
+}
+function drawNavRoute(o) {
+  if (!state.L || !state.map) return;
+  if (state.nav.line) state.nav.line.remove();
+  if (state.nav.destMk) state.nav.destMk.remove();
+  const ring = (o.geometry || []).map(c => [c[1], c[0]]);
+  if (ring.length >= 2) {
+    state.nav.line = state.L.polyline(ring, { color: '#7ED0FF', weight: 5, opacity: 0.85 }).addTo(state.map);
+    state.map.fitBounds(state.L.latLngBounds(ring), { padding: [50, 50] });
+  }
+  const d = state.nav.destHit.geo;
+  state.nav.destMk = state.L.marker(d, {
+    icon: state.L.divIcon({ className: 'me-mark', html: '<div class="cam-pin fixed">🏁</div>',
+      iconSize: [38, 38], iconAnchor: [19, 19] }),
+    interactive: false, zIndexOffset: 900,
+  }).addTo(state.map);
+}
+/* Segment projection: nearest point on the polyline + distance from the START.
+   Flat local frame (lat 110540 m/deg, lng scaled by cos(latMid)) — fine at
+   these scales, same accuracy class as the haversine rings elsewhere. */
+function projectOntoRoute(pts, p) {
+  if (!pts || pts.length < 2) return null;
+  let best = null;
+  for (let i = 1; i < pts.length; i++) {
+    const a = pts[i - 1], b = pts[i];
+    const latMid = (a[0] + b[0]) / 2;
+    const mx = 111320 * Math.cos(latMid * Math.PI / 180);
+    const ax = (a[1] - p[1]) * mx, ay = (a[0] - p[0]) * 110540;
+    const bx = (b[1] - p[1]) * mx, by = (b[0] - p[0]) * 110540;
+    const sx = (b[1] - a[1]) * mx, sy = (b[0] - a[0]) * 110540;
+    const len2 = sx * sx + sy * sy;
+    if (!len2) continue;
+    let t = -(ax * sx + ay * sy) / len2;
+    t = clamp(t, 0, 1);
+    const qx = ax + t * sx, qy = ay + t * sy;
+    const d2 = Math.sqrt(qx * qx + qy * qy);
+    if (!best || d2 < best.offM) best = { offM: d2, segIdx: i - 1, t };
+  }
+  if (!best) return null;
+  let along = 0;
+  for (let i = 1; i <= best.segIdx; i++) along += distanceAlongM(pts[i - 1], pts[i]);
+  along += distanceAlongM(pts[best.segIdx], pts[best.segIdx + 1]) * best.t;
+  return { offM: best.offM, alongM: along };
+}
+function navTick() {
+  const n = state.nav; const o = n.liveRoute;
+  if (n.phase !== 'navigating' || !o || !state.pos) return;
+  const proj = projectOntoRoute(o.geometry, state.pos);
+  if (!proj) return;
+  const pct = clamp(proj.alongM / Math.max(1, o.distanceM), 0, 1);
+  $('nv-fill').style.width = `${pct * 100}%`;
+  $('nv-remain').textContent = `باقي ${fmtRouteDist(Math.max(0, o.distanceM - proj.alongM))}`;
+  $('nv-eta').textContent = fmtRouteDur(Math.max(0, o.durationS * (1 - pct)));
+  let nextTxt = 'على الطريق — كمل زي الحال';
+  for (const m of o.maneuvers || []) {
+    const mp = projectOntoRoute(o.geometry, [m.geo[0], m.geo[1]]);
+    if (mp && mp.alongM > proj.alongM + 30) {
+      nextTxt = `${m.instruction || m.modifier || 'كمّل'} · بعد ${fmtNear((mp.alongM - proj.alongM) / 1000)}`;
+      break;
+    }
+  }
+  $('nv-next').textContent = nextTxt;
+  // deviation: off-route > 60 m for 3 consecutive fixes -> reroute (20 s throttle)
+  if (proj.offM > 60) {
+    n.offCount++;
+    if (n.offCount >= 3 && Date.now() - n.lastRerouteAt > 20000) {
+      n.lastRerouteAt = Date.now();
+      void reroute();
+    }
+  } else {
+    n.offCount = 0;
+  }
+  if (pct >= 0.98) {
+    toast('وصلت على وجهةك يا زلمة 🧿');
+    cancelNav();
+  }
+}
+async function reroute() {
+  const n = state.nav;
+  if (!n.destHit || !state.pos) return;
+  toast('عيد توجيه — مرجعين المسار 🧭');
+  const r = await directions(state.pos, n.destHit.geo, { bearingDeg: null });
+  if (!r.ok) { toast(r.error.message); return; }
+  n.liveRoute = r.options[0];
+  drawNavRoute(n.liveRoute);
+}
+function cancelNav() {
+  const n = state.nav;
+  n.phase = 'idle'; n.liveRoute = null; n.offCount = 0;
+  if (n.line) { n.line.remove(); n.line = null; }
+  if (n.destMk) { n.destMk.remove(); n.destMk = null; }
+  $('navstrip').hidden = true;
+  $('destbar-txt').textContent = 'حدّد وجهة';
+  $('destbar').querySelector('.d-ico').textContent = '🚗';
+  $('sheet').hidden = false;
+}
+
 /* list */
 function renderList() {
   if (!state.pack || !state.items) return;
@@ -477,7 +673,17 @@ function bindSettings() {
       localStorage.setItem('nz_opts', JSON.stringify(o));
     });
   }
-  $('btn-clear').onclick = () => { localStorage.removeItem('nz_opts'); localStorage.removeItem('nz_reports'); localStorage.removeItem('nz_lastpos'); toast('صفّر بياناتك المحلية'); };
+  // Mapbox token row (only rack we keep; never leaves the browser)
+  const tokEl = $('set-token');
+  if (tokEl) {
+    tokEl.value = localStorage.getItem(MAPBOX_TOKEN_KEY) || '';
+    tokEl.addEventListener('input', () => {
+      const v = tokEl.value.trim();
+      if (v) localStorage.setItem(MAPBOX_TOKEN_KEY, v);
+      else localStorage.removeItem(MAPBOX_TOKEN_KEY);
+    });
+  }
+  $('btn-clear').onclick = () => { localStorage.removeItem('nz_opts'); localStorage.removeItem('nz_reports'); localStorage.removeItem('nz_lastpos'); localStorage.removeItem(MAPBOX_TOKEN_KEY); toast('صفّر بياناتك المحلية'); };
   $('btn-settings').onclick = () => go('settings');
   $('btn-list').onclick = () => go('list');
 }
@@ -515,6 +721,7 @@ function stopDemo() {
 
 /* window resize for leaflet */
 window.addEventListener('resize', () => { state.map?.invalidateSize(); });
+/* route demo tick: demo drives feed navTick via startDemo's interval (state.pos is set there) */
 /* tab visibility: iOS silent web can't run bg GPS; surface the info, honor bgoff */
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') {

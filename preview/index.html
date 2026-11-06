@@ -48,10 +48,15 @@
         <div class="brand-txt"><span>نظرة</span><small>بيانات أمانة عمّان + الجماعة</small></div>
       </div>
       <div class="top-btns">
+        <button class="ibtn round" id="btn-navsearch" title="وجهة">🧿</button>
         <button class="ibtn round" id="btn-list" title="قائمة">🧭</button>
         <button class="ibtn round" id="btn-settings" title="إعدادات">⚙️</button>
       </div>
     </header>
+    <!-- destination entry affordance (dead-zone save: whole chip navigates) -->
+    <button class="destbar" id="destbar">
+      <span class="d-ico">🚗</span><span id="destbar-txt">حدّد وجهة</span>
+    </button>
 
     <!-- live HUD -->
     <div class="hud">
@@ -93,6 +98,20 @@
       <div class="co-bar"><i id="co-fill"></i></div>
     </div>
 
+    <!-- nav strip (destination mode) -->
+    <div class="navstrip" id="navstrip" hidden>
+      <div class="nv-head">
+        <b id="nv-dest">—</b>
+        <span id="nv-eta">—</span>
+      </div>
+      <div class="nv-next" id="nv-next">—</div>
+      <div class="nv-bar"><i id="nv-fill"></i></div>
+      <div class="nv-foot">
+        <span id="nv-remain">—</span>
+        <button class="dbtn ghost-danger" id="btn-navcancel">إنهاء الوصول</button>
+      </div>
+    </div>
+
     <!-- floating controls -->
     <div class="fs">
       <button class="fbtn" id="btn-locate" title="موقعي">◎</button>
@@ -114,6 +133,23 @@
         <button class="dbtn ghost-danger" id="btn-stop" hidden>⏹ إيقاف الديمو</button>
       </div>
     </div>
+  </section>
+
+  <!-- SEARCH (destination) -->
+  <section id="sc-search" class="screen" hidden>
+    <header class="topbar"><div class="brand"><span>وجهة</span></div><button class="ibtn" id="btn-back-4">↩︎</button></header>
+    <input id="dest-search" placeholder="ابحث… وين حابب توصل؟" autocomplete="off" inputmode="search" />
+    <div id="token-note" class="toknote" hidden>ليبيتش خرائط حيّة: أضف مفتاح Mapbox من الإعدادات ↓</div>
+    <ul id="DestResList" class="rlist"></ul>
+  </section>
+
+  <!-- ROUTE PREVIEW -->
+  <section id="sc-route" class="screen" hidden>
+    <header class="topbar"><div class="brand"><span>المسار</span></div><button class="ibtn" id="btn-back-5">↩︎</button></header>
+    <p class="rep-lead" id="route-lead">—</p>
+    <ul id="RouteOptList" class="rlist"></ul>
+    <button class="cta" id="btn-startroute" disabled>ابدأ الوصول 🚗</button>
+    <p class="rep-auto">مسارات مباشرة من Mapbox. نظرة ما بتلعب أرقام — بتعين الحقيقي.</p>
   </section>
 
   <!-- LIST -->
@@ -166,6 +202,10 @@
       <h2>خصوصية</h2>
       <label class="row"><span>أوقف الموقع والصفحة مقفلة</span><input type="checkbox" id="set-bgoff" checked /></label>
       <label class="row"><span>شارك بلاغات الموقع مع الجماعة</span><input type="checkbox" id="set-share" checked /></label>
+
+      <h2>طبقة الخرائط الحيّة</h2>
+      <label class="row"><span>مفتاح Mapbox</span><input type="text" id="set-token" inputmode="text" placeholder="pk.…" autocomplete="off" spellcheck="false" /></label>
+      <small class="tokhint">اختياري — بدون المفتاح، البحث والمسار بيرجعوا حالة صادقة، ومينفع نصنع أرقام مزيفة.</small>
 
       <h2>عن</h2>
       <div class="about">

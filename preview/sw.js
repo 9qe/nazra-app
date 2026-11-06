@@ -1,8 +1,8 @@
 // Nazra نظرة — offline-first PWA service worker
 // Cache-first for shell assets; network-first for radars.json so updates land.
-const V = 'nazra-v3';
+const V = 'nazra-v4';
 const SHELL = ['./', './index.html', './app.css', './app.js',
-  './lib/geo.js', './lib/alerts.js', './lib/voice.js', './lib/ui.js',
+  './lib/geo.js', './lib/alerts.js', './lib/voice.js', './lib/ui.js', './lib/routing.js',
   './manifest.json', './data/radars.json'];
 
 self.addEventListener('install', (e) => {
