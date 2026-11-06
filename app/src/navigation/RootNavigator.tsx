@@ -4,6 +4,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { OnboardingScreen } from '../screens/Onboarding';
 import { AboutScreen } from '../screens/About';
+import { SearchScreen } from '../screens/Search';
+import { RoutePreviewScreen } from '../screens/RoutePreview';
+import { NavigationScreen } from '../screens/Navigation';
 import { AppTabs, useOnboardingGate } from './AppTabs';
 import type { RootStackParamList } from './types';
 import { useTheme } from '../theme/useTheme';
@@ -43,6 +46,9 @@ export function RootNavigator() {
               component={AboutScreen}
               options={{ presentation: 'modal', animation: 'slide_from_bottom' }}
             />
+            <RootStack.Screen name="Search" component={SearchScreen} />
+            <RootStack.Screen name="RoutePreview" component={RoutePreviewScreen} />
+            <RootStack.Screen name="Navigation" component={NavigationScreen} />
           </>
         ) : (
           <RootStack.Screen name="Onboarding" component={OnboardingScreen} />

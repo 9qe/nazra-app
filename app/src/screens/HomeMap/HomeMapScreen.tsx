@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View, I18nManager } from 'react-native';
 import MapView, { Marker, Polyline, type Region } from 'react-native-maps';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useNavigation, type NavigationProp } from '@react-navigation/native';
 import { CAMERA_POINTS, ZONE_POINTS, TYPE_COLOR, TYPE_LABEL_AR, pointName, CAMERA_COUNT, ZONE_COUNT } from '../../data/radarDataset';
 import { DEFAULT_CENTER } from '../../api/query';
 import { distanceKm } from '../../utils/geo';
@@ -11,6 +12,7 @@ import { openSystemSettings } from '../../security/permissionGate';
 import { useAlertFeed } from '../../store/useAlertFeed';
 import { useTheme, makeStyles } from '../../theme/useTheme';
 import { AlertDialogCard } from '../AlertDialog/AlertDialogScreen';
+import type { RootStackParamList } from '../../navigation/types';
 
 /**
  * Real Apple-Maps screen (MapKit via react-native-maps, no keys needed):
@@ -23,6 +25,8 @@ export function HomeMapScreen() {
   const t = useTheme();
   const s = useHomeStyles();
   const insets = useSafeAreaInsets();
+  // root-stack navigation for the search entry affordance
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const { permission, fix, error, request } = useLocationStream();
   useAlerts(fix);
@@ -69,6 +73,16 @@ export function HomeMapScreen() {
 
   return (
     <View style={[s.container, { paddingTop: insets.top }]}>
+      {/* destination search entry — added affordance; map/alert layout untouched */}
+      <View style={[s.searchEntryRow, { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row' as const }]}>
+        <Pressable
+          style={({ pressed }) => [s.searchEntryBtn, pressed && { opacity: 0.85 }]}
+          onPress={() => navigation.navigate('Search')}
+          hitSlop={6}
+        >
+          <Text style={[t.text.label, { color: t.colors.textPrimary }]}>🔍 بحث وجهة</Text>
+        </Pressable>
+      </View>
       <View style={s.mapWrap}>
         <MapView
           ref={mapRef}
@@ -183,6 +197,16 @@ const useHomeStyles = makeStyles((t) =>
   StyleSheet.create({
     container: { flex: 1, backgroundColor: t.colors.background },
     mapWrap: { flex: 1, overflow: 'hidden' },
+    searchEntryRow: { paddingHorizontal: 12, paddingTop: 6, paddingBottom: 4 },
+    searchEntryBtn: {
+      alignSelf: 'flex-start',
+      backgroundColor: t.colors.surface,
+      borderWidth: 1,
+      borderColor: t.colors.border,
+      borderRadius: t.radius.pill,
+      paddingVertical: 8,
+      paddingHorizontal: 14,
+    },
     followBtn: {
       position: 'absolute',
       right: 12,
