@@ -278,7 +278,7 @@ const useStyles = makeStyles((t) =>
       position: 'absolute',
       left: 12,
       right: 12,
-      backgroundColor: t.colors.scrim,
+      backgroundColor: 'rgba(23,20,31,0.86)', // guidance: near-solid ink bar over the light map
       borderRadius: t.radius.lg,
       padding: 12,
       gap: t.spacing[2],

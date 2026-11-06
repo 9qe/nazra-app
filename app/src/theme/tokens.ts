@@ -8,25 +8,26 @@ export const appNameEn = 'Nazra';
 export const appTagline = 'تفشش الثقة قبل الحدّ';
 
 export const colors = {
-  /* Nazra نظرة — palette from research/brand.json (brand.json → visual.palette)
-     Wadi Rum Night 60 · Gerasa Stone 25 · Petra Rose 8 · Nazar Blue 4 · Ajloun Pine 2 · Dana Amber 1 */
-  primary: '#F0537E',        // Petra Rose — CTA, alerts, camera flash
+  /* Nazra colors - clean premium light (reskin v2).
+     Porcelain canvas, white cards, graphite ink.
+     Brand accents kept: Petra Rose alerts/CTA, Nazar Blue trust. */
+  primary: '#F0537E',        // Petra Rose - CTA, alerts, camera flash
   primaryPressed: '#D43D68',
-  accent: '#3D5AF1',         // Nazar Blue — bead iris, community-verified pins, trust accent
-  warn: '#F5A623',           // Dana Amber — soon-events, low-data states
-  critical: '#E14059',       // deep rose-red for flash events (keep distinct from warn)
-  background: '#14131A',     // Wadi Rum Night
-  surface: '#211D29',        // Gerasa Stone
-  surfaceRaised: '#2A2438',
-  border: '#332B45',
-  textPrimary: '#EDEFF6',
-  textSecondary: '#9AA3B8',
-  textDisabled: '#5C6678',
-  success: '#2FBF71',        // Ajloun Pine — passed-clean, streak alive
-  mapOvernight: '#0E0D13',
-  scrim: 'rgba(10,9,14,0.62)',
-  streak: '#F5A623',         // 1% Dana Amber reuse for the بطيخة watermark on exports
-};
+  accent: '#3D5AF1',         // Nazar Blue - bead iris, community-verified pins, trust accent
+  warn: '#E89B1D',           // Dana Amber - soon-events, low-data states
+  critical: '#E14059',       // deep rose-red for flash events
+  background: '#F6F6F9',     // porcelain canvas
+  surface: '#FFFFFF',        // card white
+  surfaceRaised: '#FFFFFF',  // raised cards differentiate by shadow, not tint
+  border: '#E8E8EF',
+  textPrimary: '#17141F',    // graphite ink
+  textSecondary: '#6E7391',
+  textDisabled: '#A6AABF',
+  success: '#1F9D66',        // Ajloun Pine - passed-clean, streak alive
+  mapOvernight: '#EFEFF4',   // map tint (value follows the light canvas)
+  scrim: 'rgba(23,20,31,0.42)',
+  streak: '#F5A623',         // watermark on exports
+} as const;
 
 /** Nazra voice system — Zeizo persona (Zarqa-core, Ammani slang default, MSA fallback).
     Loaded straight from research/brand.json → dialect_lines. Keyed to triggers. */

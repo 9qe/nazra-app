@@ -237,7 +237,7 @@ const useHomeStyles = makeStyles((t) =>
       left: 12,
       right: 12,
       flexDirection: 'row',
-      backgroundColor: t.colors.scrim,
+      backgroundColor: 'rgba(23,20,31,0.86)', // HUD: near-solid ink bar over the light map
       borderRadius: t.radius.lg,
       paddingVertical: 10,
     },
