@@ -1,5 +1,11 @@
 import { distanceKm } from '../utils/geo';
+import { RouteCorridor, angularDiffDeg, BEHIND_PAST_M, type RouteGeometry } from './RouteCorridor';
 import type { CameraType, GeoPoint } from '../types/radar';
+
+/** Camera fires only when |heading - watched bearing| <= this (wraps 0/360). */
+const DIRECTION_TOLERANCE_DEG = 90;
+/** Route-aware gate: anchors projecting more than this far off the route never fire (m). */
+const ANCHOR_ON_ROUTE_M = 50;
 
 /**
  * Corridor + camera alert engine — pure TS, no UI/React imports (mirrors the
@@ -46,6 +52,8 @@ export interface AlertPoint {
   limitKph: number | null;
   nameAr: string;
   nameEn: string;
+  /** Direction of travel the camera watches, degrees 0..360. null = all directions. */
+  bearingDeg?: number | null;
 }
 
 export interface AlertZone {
@@ -56,6 +64,8 @@ export interface AlertZone {
   limitKph: number | null;
   nameAr: string;
   nameEn: string;
+  /** Direction of travel the corridor watches, degrees 0..360. null = all directions. */
+  bearingDeg?: number | null;
 }
 
 export interface AlertEvent {
@@ -102,6 +112,8 @@ export interface AlertEngineOptions {
   zoneEnterRadiusM?: number;
   /** Corridor EXIT gate radius, meters (default 220 — PWA spec 0.22 km). */
   zoneExitRadiusM?: number;
+  /** Route-aware filtering on (via setRoute) — off-route/behind cameras never fire. */
+  routeAware?: boolean;
   threshold: ThresholdCfg;
 }
 
@@ -156,6 +168,7 @@ export class AlertEngine {
   private opts: AlertEngineOptions;
   private camStates = new Map<string, CamState>();
   private zoneStates = new Map<string, ZoneState>();
+  private corridor: RouteCorridor | null = null;
   private lastEmitAt = -Infinity;
 
   constructor(
@@ -175,6 +188,16 @@ export class AlertEngine {
     this.opts = opts;
   }
 
+  /** Install/replace the route layer (rerouting). null drops route-awareness. */
+  setRoute(geometry: RouteGeometry | null): void {
+    if (geometry === null) {
+      this.corridor = null;
+      return;
+    }
+    if (this.corridor === null) this.corridor = new RouteCorridor(geometry);
+    else this.corridor.setRoute(geometry);
+  }
+
   reset(): void {
     this.camStates = new Map();
     this.zoneStates = new Map();
@@ -182,10 +205,14 @@ export class AlertEngine {
   }
 
   /** Feed one fix. speedKph null when GPS gave no speed. nowMs = Date.now(). */
-  onPos(lat: number, lng: number, speedKph: number | null, nowMs: number): void {
+  onPos(lat: number, lng: number, speedKph: number | null, nowMs: number, headingDeg: number | null = null): void {
+    const routeAware = this.opts.routeAware === true && this.corridor !== null && !this.corridor.isEmpty;
+    const fix = pair(lat, lng);
     const [r500, r300, r150] = this.opts.camRadiiM ?? DEFAULT_CAM_RADII;
     for (const p of this.points) {
-      const d = distanceKm(pair(lat, lng), pair(p.lat, p.lng)) * 1000;
+      const d = distanceKm(fix, pair(p.lat, p.lng)) * 1000;
+      if (headingDeg != null && p.bearingDeg != null && angularDiffDeg(headingDeg, p.bearingDeg) > DIRECTION_TOLERANCE_DEG) continue;
+      if (routeAware && !this.routeGateOpen(fix, pair(p.lat, p.lng))) continue;
       const st = this.camStateFor(p.id);
       this.stepRing(p, st, 'cam_500', r500, d, speedKph, nowMs);
       this.stepRing(p, st, 'cam_300', r300, d, speedKph, nowMs);
@@ -193,8 +220,26 @@ export class AlertEngine {
       this.stepRing(p, st, 'cam_passing', this.opts.passingRadiusM ?? DEFAULT_PASSING_M, d, speedKph, nowMs);
     }
     for (const z of this.zones) {
+      if (headingDeg != null && z.bearingDeg != null && angularDiffDeg(headingDeg, z.bearingDeg) > DIRECTION_TOLERANCE_DEG) continue;
+      if (routeAware && !this.routeGateOpen(fix, gate(z.exit))) continue;
       this.stepZone(z, lat, lng, speedKph, nowMs);
     }
+  }
+
+  /**
+   * Route gate: cameras/zones whose anchor projects off-route, or behind the
+   * fix along the route, never fire. False => skipped for THIS fix entirely
+   * (no emit, no ring-state mutation) so a later legal fix behaves as if the
+   * refused fix never happened.
+   */
+  private routeGateOpen(fix: GeoPoint, anchor: GeoPoint): boolean {
+    if (this.corridor === null) return true;
+    const camProj = this.corridor.projectionOf(anchor);
+    const fixProj = this.corridor.projectionOf(fix);
+    if (camProj === null || fixProj === null) return false;
+    // anchor must actually sit on the driven line — parallel-road cameras never fire
+    if (camProj.offsetM > ANCHOR_ON_ROUTE_M) return false;
+    return camProj.alongM - fixProj.alongM >= -BEHIND_PAST_M;
   }
 
   private camStateFor(id: string): CamState {
